@@ -24,7 +24,7 @@ const Footer = () => {
           <p className="text-[#393F48] text-[18px] mt-1">Вакансии</p>
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-white">.</h1>
+          <h1 className="text-2xl font-bold text-white">‎ </h1>
           <p className="text-[#393F48] text-[18px] mt-2">Каталог</p>
           <p className="text-[#393F48] text-[18px] mt-1">Рецепты</p>
           <p className="text-[#393F48] text-[18px] mt-1">Контакты</p>

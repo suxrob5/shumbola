@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="max-w-[1920px]">
       {/* Header */}
-      <div className="">
+      <div>
         <Header />
       </div>
       {/* Baner side */}

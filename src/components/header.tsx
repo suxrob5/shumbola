@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <button className="flex items-center justify-center cursor-pointer">
             <Image src={Search} alt="search" width={48} height={48} />
           </button>
-          <Link href="#">
+          <Link href="https://youtube.com/">
             <Image src={Telegram} alt="telegram" width={25} height={25} />
           </Link>
           <Link href="#">

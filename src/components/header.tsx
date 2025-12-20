@@ -68,6 +68,8 @@ const Header: React.FC = () => {
                 <Image
                   src={Shumbola}
                   alt="logo"
+                  width={90}
+                  height={100}
                   className={`transition-all duration-300 ${
                     scrolled ? "w-[50px] h-[60px]" : "w-[90px] h-[100px]"
                   }`}

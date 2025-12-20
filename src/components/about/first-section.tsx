@@ -1,13 +1,9 @@
-import AboutCm from "@/assets/images/about/about-company.png";
 import VideoBaner from "@/assets/images/video-baner.png";
 import Image from "next/image";
 
 const FirstSection = () => {
   return (
     <div className="max-w-[1920px] w-[80%] mx-auto">
-      <div className="flex items-center justify-center mt-[250px]">
-        <Image src={AboutCm} alt="img" className="" />
-      </div>
       <div className="flex items-center justify-between mt-20">
         <div>
           <h1 className="text-4xl font-bold">О бренде</h1>

@@ -9,7 +9,7 @@ const MiniInform = () => {
       {InformData.map((item) => (
         <div
           key={item.id}
-          className="bg-[#a1c9e6] w-full xl:w-[330px] h-[300px] p-5 rounded-3xl"
+          className="bg-[#E8F1F9] w-full xl:w-[330px] h-80 p-5 rounded-3xl"
         >
           <Image
             src={item.imageUrl}
@@ -19,12 +19,11 @@ const MiniInform = () => {
             height={125}
           />
 
-          <p className="text-4xl font-extrabold" style={{ color: "#3291D3" }}>
+          <p className="text-4xl font-bold" style={{ color: "#3291D3" }}>
             {item.number}
           </p>
-
-          <p className="text-black font-bold text-2xl">{item.about}</p>
-          <p className="text-[#484D53]">{item.more}</p>
+          <p className="text-black font-semibold text-2xl mt-2">{item.about}</p>
+          <p className="text-[#484D53] mt-1">{item.more}</p>
         </div>
       ))}
     </div>

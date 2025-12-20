@@ -23,11 +23,10 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50
-  flex items-center justify-between px-6
-  transition-all duration-300
-  backdrop-blur-md
-  bg-blue-500/40
-  border-b border-blue-300/30
+        flex items-center justify-between px-6
+        transition-all duration-300 border-b
+        backdrop-blur-md bg-[#368BC6]/70
+       border-blue-300/30
   ${scrolled ? "h-[70px]" : "h-[100px]"}
 `}
     >
@@ -70,7 +69,7 @@ const Header: React.FC = () => {
                   src={Shumbola}
                   alt="logo"
                   className={`transition-all duration-300 ${
-                    scrolled ? "w-[60px] h-[60px]" : "w-[100px] h-[100px]"
+                    scrolled ? "w-[50px] h-[60px]" : "w-[90px] h-[100px]"
                   }`}
                 />
               </Link>

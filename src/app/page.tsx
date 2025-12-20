@@ -17,7 +17,7 @@ const Home = () => {
       {/* Baner side */}
       <div>
         <Image src={Baner} alt="baner" className="abolute" />
-        <div className="absolute w-full mt-[-380px]">
+        <div className="absolute w-full mt-[-300px]">
           <h1 className="text-center text-white font-extrabold text-7xl">
             Shumbola — с 2010 года <br /> ваши любимые снеки
           </h1>
@@ -29,7 +29,6 @@ const Home = () => {
         {/* Information card */}
         <MiniInform />
       </main>
-      <div className="border max-w-[75%] mx-auto h-[3px] bg-gray-300 mt-[100px]"></div>
       {/* Footer */}
       <Footer />
     </div>

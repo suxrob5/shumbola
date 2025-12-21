@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
+    <div className="max-w-[1920px] mx-auto">
       <div className="border max-w-[75%] mx-auto h-[3px] bg-gray-300 mt-[100px]"></div>
       <div className="max-w-[75%] mx-auto mt-[100px]">
         <div className="flex items-center justify-between">
@@ -61,12 +61,19 @@ const Footer = () => {
               </Link>
             </button>
             <div className="gap-3">
-              <button className="bg-[#E8F1F9] rounded-2xl p-3 mt-2 cursor-pointer">
-                <Image src={Telegram} alt="tg" width={25} height={25} />
-              </button>
-              <button className="bg-[#E8F1F9] rounded-2xl p-3 mt-2 cursor-pointer ml-3">
-                <Image src={Facebook} alt="tg" width={25} height={25} />
-              </button>
+              <Link href="https://t.me/shumbolauzz" target="_blank">
+                <button className="bg-[#E8F1F9] rounded-2xl p-3 mt-2 cursor-pointer">
+                  <Image src={Telegram} alt="tg" width={25} height={25} />
+                </button>
+              </Link>
+              <Link
+                href="https://www.instagram.com/shumbola.uz/"
+                target="_blank"
+              >
+                <button className="bg-[#E8F1F9] rounded-2xl p-3 mt-2 cursor-pointer ml-3">
+                  <Image src={Facebook} alt="tg" width={25} height={25} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,7 +84,7 @@ const Footer = () => {
           Copyright © 2025, Shumbola production
         </h1>
       </div>
-    </>
+    </div>
   );
 };
 

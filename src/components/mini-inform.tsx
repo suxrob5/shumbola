@@ -9,7 +9,7 @@ const MiniInform = () => {
       {InformData.map((item) => (
         <div
           key={item.id}
-          className="bg-[#E8F1F9] w-full xl:w-[330px] h-80 p-5 rounded-3xl"
+          className="bg-[#E8F1F9] w-full xl:w-[330px] h-[350px] p-5 rounded-3xl"
         >
           <Image
             src={item.imageUrl}

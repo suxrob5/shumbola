@@ -66,7 +66,7 @@ const History = () => {
             <br />
             Директор компании ERMAK.
           </p>
-          <h1 className="text-4xl font-bold mt-3">Abdulaziz</h1>
+          <h1 className="text-4xl font-bold mt-3">Kasimov Baxtiyor</h1>
           <p className="text-[#484D53] italic">Директор компании Shumbola</p>
         </div>
         <div>

@@ -1,6 +1,8 @@
 import { catalogData } from "@/components/catalog/ct-data";
+import IdPage from "@/components/catalog/id-page";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import NotFound from "@/components/not-found";
 
 type Props = {
   params: Promise<{
@@ -11,17 +13,22 @@ type Props = {
 export default async function CatalogID({ params }: Props) {
   const { id } = await params;
 
-  const item = catalogData.find((el) => String(el.id) === id);
+  const filterData = catalogData.filter((link) => link.link === id);
+
+  if (filterData.length === 0) {
+    return <NotFound />;
+  }
+
+  const name = catalogData.find((item) => item.link === id)?.name;
 
   return (
     <div>
       <header>
         <Header />
       </header>
-      <div className="mt-40">
-        <h1>Catalog ID: {id}</h1>
-        <pre>{JSON.stringify(item, null, 2)}</pre>
-      </div>
+      <main className="mt-40">
+        <IdPage name={name} />
+      </main>
 
       <footer>
         <Footer />

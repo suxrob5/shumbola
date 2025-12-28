@@ -19,7 +19,9 @@ export default async function CatalogID({ params }: Props) {
     return <NotFound />;
   }
 
-  const name = catalogData.find((item) => item.link === id)?.name;
+  const item = catalogData.find((item) => item.link === id);
+
+  console.log(item);
 
   return (
     <div>
@@ -27,7 +29,7 @@ export default async function CatalogID({ params }: Props) {
         <Header />
       </header>
       <main className="mt-40">
-        <IdPage name={name} />
+        <IdPage item={item} />
       </main>
 
       <footer>

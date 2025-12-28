@@ -1,29 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import { catalogData } from "./ct-data";
 import Image from "next/image";
 import { ProductType } from "@/types/types";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const IdPage = ({ item }: any) => {
-  console.log(item);
-
-  // group bg-linear-to-br from-[#E8F1F9] to-[#bfe7f6] rounded-2xl h-[120px] flex items-center justify-center shadow-md transition-all
-  //       duration-300 hover:shadow-2xl hover:-translate-y-2 hover:from-[#3291D3] hover:to-[#5bb0ff] cursor-pointer
+  const pathname = usePathname();
   return (
     <div className="max-w-[1920px] mx-auto px-5">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#3f68ce] mb-14">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#368BC6] mb-14">
         {item.name}
       </h1>
 
       <section className="max-w-[1200px] w-[65%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-        {catalogData.map((item) => (
-          <Link href={item.link} key={item.id}>
-            <div className="bg-[#E8F1F9] rounded-xl p-5 w-[150px] h-[100px]">
-              <h1 className="text-xl font-bold text-[#368BC6] transition-colors duration-300 group-hover:text-white">
-                {item.name}
-              </h1>
-            </div>
-          </Link>
-        ))}
+        {catalogData.map((cat) => {
+          const isActive = pathname === `/catalog/${cat.link}`;
+          return (
+            <Link href={cat.link} key={cat.id}>
+              <div
+                className={`
+                 rounded-xl p-5 w-[150px] h-[100px]
+                ${isActive ? "bg-[#E8F1F9] text-[#368BC6]" : "bg-[#EFF2F5]"}
+                `}
+              >
+                <h1 className="text-xl font-semibold transition-colors duration-300 group-hover:text-white">
+                  {cat.name}
+                </h1>
+              </div>
+            </Link>
+          );
+        })}
       </section>
       {/* products */}
       <div className="flex items-center justify-between max-w-[1200px] mx-auto w-[65%] mt-20">

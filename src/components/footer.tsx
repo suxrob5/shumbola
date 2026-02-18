@@ -9,7 +9,8 @@ const Footer = () => {
     <div className="max-w-[1920px] mx-auto">
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto border-t border-gray-300 mt-16 md:mt-[100px] pt-10"></div>
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto mt-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+
           <div className="flex justify-center sm:justify-start">
             <Image
               src={MainImg}
@@ -63,31 +64,40 @@ const Footer = () => {
                     +998 95 805 39 96
                   </Link>
                 </button>
-                <button className="bg-[#E8F1F9] rounded-2xl p-3 w-full sm:w-auto">
-                  <Link
-                    href="tel:+998958053996"
-                    className="text-base md:text-[18px] font-medium block"
-                  >
-                    Ташкент, ул. kushkurgon
-                  </Link>
-                </button>
               </div>
             </div>
-            <div className="flex gap-3 justify-center sm:justify-start">
-              <Link href="https://t.me/shumbolauzz" target="_blank">
-                <button className="bg-[#E8F1F9] rounded-2xl p-3 cursor-pointer hover:bg-blue-100 transition-colors">
-                  <Image src={Telegram} alt="tg" width={25} height={25} />
-                </button>
-              </Link>
-              <Link
-                href="https://www.instagram.com/shumbola.uz/"
-                target="_blank"
-              >
-                <button className="bg-[#E8F1F9] rounded-2xl p-3 cursor-pointer hover:bg-blue-100 transition-colors">
-                  <Image src={Facebook} alt="fb" width={25} height={25} />
-                </button>
-              </Link>
+
+          </div>
+          <div>
+            {/* defgerf */}
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Контакты</h3>
+            <div className="flex flex-col gap-3 items-center sm:items-start">
+
+              <button className="bg-[#E8F1F9] rounded-2xl p-3 w-full sm:w-auto">
+                <Link
+                  href="tel:+998958053996"
+                  className="text-base md:text-[18px] font-medium block"
+                >
+                  Ташкент, ул. kushkurgon
+                </Link>
+              </button>
+              <div className="flex gap-3 justify-center sm:justify-start">
+                <Link href="https://t.me/shumbolauzz" target="_blank">
+                  <button className="bg-[#E8F1F9] rounded-2xl p-3 cursor-pointer hover:bg-blue-100 transition-colors">
+                    <Image src={Telegram} alt="tg" width={25} height={25} />
+                  </button>
+                </Link>
+                <Link
+                  href="https://www.instagram.com/shumbola.uz/"
+                  target="_blank"
+                >
+                  <button className="bg-[#E8F1F9] rounded-2xl p-3 cursor-pointer hover:bg-blue-100 transition-colors">
+                    <Image src={Facebook} alt="fb" width={25} height={25} />
+                  </button>
+                </Link>
+              </div>
             </div>
+            {/* defgerf */}
           </div>
         </div>
       </div>

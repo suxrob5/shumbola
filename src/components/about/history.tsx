@@ -8,74 +8,81 @@ import Image from "next/image";
 const History = () => {
   return (
     <>
-      <div className="mt-40 relative flex items-center justify-center">
-        <Image src={Baner} alt="baner" className="sticky" />
-        <div className="flex items-center justify-between absolute w-[80%] max-w-[1920px] mx-auto mt-10">
-          <Image
-            src={Workers}
-            alt="baner"
-            width={650}
-            height={395}
-            className="w-[50%]"
-          />
-          <div className="w-[45%]">
-            <h1 className="text-4xl font-bold">История компании</h1>
-            <p className="mt-3 text-[#3484D53] ">
+      {/* 1. История компании - Banner Section */}
+      <div className="mt-20 md:mt-40 relative flex items-center justify-center min-h-[400px]">
+        {/* Fon rasmi */}
+        <div className="absolute inset-0 z-0">
+          <Image src={Baner} alt="baner" fill className="object-cover" />
+        </div>
+
+        {/* Kontent qismi */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[80%] max-w-[1920px] mx-auto gap-10 py-10">
+          <div className="w-full md:w-[50%]">
+            <Image
+              src={Workers}
+              alt="workers"
+              className="w-full h-auto rounded-2xl shadow-xl"
+            />
+          </div>
+          <div className="w-full md:w-[45%] md:text-inherit">
+            {/* Eslatma: Agar baner ustida matn ko'rinmasa, text-white yoki bg-white/10 qo'shish mumkin */}
+            <h1 className="text-3xl md:text-4xl font-bold">История компании</h1>
+            <p className="mt-3 text-sm md:text-base text-[#484D53] leading-relaxed">
               В 2022 году под брендом Shumbola впервые в Узбекистане
+
               организовали фабричную переработку, производство и реализацию
+
               продукции из семян подсолнечника. С 2024 года ERMAK — первый и
+
               единственный в Узбекистане производитель курта в фабричных
+
               условиях. Мы постоянно расширяем линейку продукции. Под единым
+
               брендом ERMAK сегодня выпускаются семечки, курт, сухофрукты и
+
               сушки. Со дня основания девизом компании стал слоган: «Полезно,
+
               вкусно, чисто». Этим главным критериям соответствует каждый
+
               продукт торговой марки ERMAK.
             </p>
           </div>
         </div>
       </div>
-      {/* Creator */}
-      <div className="mt-40 w-[80%] max-w-[1920px] mx-auto flex items-center justify-center gap-40">
-        <div className="w-[45%]">
-          <p className="text-[#484D53]">
-            «Производство продуктов питания – процесс сложный и ответственный.
-            Гарантия качества продукции лежит на совести производителя. Мы
-            понимаем, что произведенный и упакованный сегодня курт ERMAK завтра
-            съест ребенок. Возможно, это будет мой сын или внук. Именно поэтому
-            я и каждый сотрудник нашей компании при производстве продукта думаем
-            о себе, своих детях. Мы уверены в пользе и качестве наших продуктов
-            и по праву гордимся тем, что за двадцать лет производства не было
-            выявлено ни одного случае несоответствия заявленному качеству
-            продукции. Мы благодарим Вас за выбор продукции ERMAK. Желаем
-            приятного аппетита и отменного здоровья Вам и Вашим детям.» Салихов
-            Валижан Кучкарович Директор компании ERMAK.
+
+      {/* 2. Creator - Direktor qismi */}
+      <div className="mt-20 md:mt-40 w-[90%] md:w-[80%] max-w-[1920px] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-40">
+        <div className="w-full md:w-[55%]">
+          <p className="text-[#484D53] text-sm md:text-base leading-relaxed italic">
+            «Производство продуктов питания – процесс сложный и ответственный...»
           </p>
-          <h1 className="text-4xl font-bold mt-3">Kasimov Baxtiyor</h1>
-          <p className="text-[#484D53] italic">Директор компании Shumbola</p>
+          <h1 className="text-3xl md:text-4xl font-bold mt-6">Kasimov Baxtiyor</h1>
+          <p className="text-[#484D53]">Директор компании Shumbola</p>
         </div>
-        <div>
-          <Image src={Creator} alt="baner" width={426} height={426} />
+        <div className="w-[60%] md:w-[35%] lg:w-[30%]">
+          <Image
+            src={Creator}
+            alt="creator"
+            className="w-full h-auto rounded-full md:rounded-2xl"
+          />
         </div>
       </div>
 
-      {/* Foto about */}
-      <div className="mt-30 w-[80%] max-w-[1920px] mx-auto">
-        <h1 className="text-4xl font-bold">Фотоотчет</h1>
-        <div className="grid grid-cols-3 mt-10 gap-20">
+      {/* 3. Foto about - Fotootchet */}
+      <div className="mt-20 md:mt-30 w-[90%] md:w-[80%] max-w-[1920px] mx-auto pb-20">
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left">Фотоотчет</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           <Image
             src={AboutProduct}
-            alt="baner"
-            width={450}
-            height={346}
-            className="rounded-2xl"
+            alt="product"
+            className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
           />
           <Image
             src={AboutProduct2}
-            alt="baner"
-            width={450}
-            height={346}
-            className="rounded-2xl"
+            alt="product2"
+            className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
           />
+          {/* Uchinchi rasm bo'lsa shu yerga qo'shiladi */}
         </div>
       </div>
     </>

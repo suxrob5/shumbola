@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const FirstSection = () => {
   return (
-    <div className="max-w-[1920px] w-[80%] mx-auto">
-      <div className="flex items-center justify-between mt-20">
-        <div className="w-[45%]">
-          <h1 className="text-4xl font-bold">О бренде</h1>
-          <p className="mt-6 text-[#484D53]">
+    <div className="max-w-[1920px] w-[90%] md:w-[80%] mx-auto py-10 md:py-20">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div className="w-full lg:w-[45%]">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">О бренде</h1>
+          <p className="mt-6 text-[#484D53] leading-relaxed text-sm md:text-[17px]">
             Бренд Shumbola основан в 1992 году как небольшая семейная компания
             из трёх человек, с простой, но сильной идеей — создавать натуральные
             продукты, вкусу которых можно доверять. За годы развития Shumbola
@@ -22,9 +22,17 @@ const FirstSection = () => {
             технологии и доверие миллионов потребителей.
           </p>
         </div>
-        <div className="cursor-pointer w-[50%%]">
-          <Image src={VideoBaner} alt="img" className="w-[650px] h-[396px]" />
+        <div className="w-full lg:w-[50%] cursor-pointer">
+          <div className="relative w-full h-auto">
+            <Image 
+              src={VideoBaner} 
+              alt="Shumbola brand video banner" 
+              priority
+              className="w-full h-auto object-cover rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
+
       </div>
     </div>
   );

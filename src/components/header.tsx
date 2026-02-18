@@ -107,7 +107,7 @@ const Header: React.FC = () => {
             <Image src={Search} alt="search" width={32} height={32} />
           </button>
           <div
-            className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}
+            className={`${scrolled ? "text-lg" : "text-[20px]"} hidden sm:flex items-center gap-2`}
           >
             <Image src={Rusian} alt="language" width={25} height={25} />
             <select className="Languages bg-transparent border-none outline-none text-white option:text-black cursor-pointer">
@@ -157,6 +157,23 @@ const Header: React.FC = () => {
             <Link href="#">
               <Image src={Facebook} alt="facebook" width={30} height={30} />
             </Link>
+
+          </div>
+          <div
+            className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}
+          >
+            <Image src={Rusian} alt="language" width={25} height={25} />
+            <select className="Languages bg-transparent border-none outline-none text-white option:text-black cursor-pointer">
+              <option value="ru" className="text-black">
+                Русский
+              </option>
+              <option value="en" className="text-black">
+                English
+              </option>
+              <option value="uz" className="text-black">
+                Uzbek
+              </option>
+            </select>
           </div>
         </ul>
       </div>

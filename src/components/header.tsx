@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 // Images
 import Search from "../../public/search.png";
@@ -13,6 +14,7 @@ import Shumbola from "../assets/icons/shumbola.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -20,20 +22,27 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50
-        flex items-center justify-between px-6
-        transition-all duration-300 border-b
+        transition-all duration-300 border-b border-blue-300/30
         backdrop-blur-md bg-[#368BC6]/70
-       border-blue-300/30
-  ${scrolled ? "h-[70px]" : "h-[100px]"}
-`}
+        ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
+      `}
     >
-      <div className="max-w-[90%] mx-auto flex items-center justify-between w-full">
-        <div className="flex items-center gap-5">
+      <div className="max-w-[90%] mx-auto flex items-center justify-between w-full h-full">
+        {/* Left Side: Socials (Desktop) */}
+        <div className="hidden lg:flex items-center gap-4">
           <button className="flex items-center justify-center cursor-pointer">
-            <Image src={Search} alt="search" width={48} height={48} />
+            <Image
+              src={Search}
+              alt="search"
+              width={48}
+              height={48}
+              className="w-[40px] h-[40px]"
+            />
           </button>
           <Link href="https://youtube.com/">
             <Image src={Telegram} alt="telegram" width={25} height={25} />
@@ -43,26 +52,21 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-5">
-          <ul className="flex items-center justify-between gap-5 text-white">
-            <Link
-              href="/about"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              О компании
-            </Link>
-            <Link
-              href="/catalog"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              Каталог
-            </Link>
-            <Link
-              href="/discount"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              Акции
-            </Link>
+        {/* Mobile Hamburger Button */}
+        <div className="lg:hidden flex items-center">
+          <button onClick={toggleMenu} className="text-white p-2">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* Center: Navigation (Desktop) */}
+        <div className="hidden lg:flex items-center gap-5">
+          <ul
+            className={`flex items-center justify-between gap-5 text-white ${scrolled ? "text-lg" : "text-[20px]"}`}
+          >
+            <Link href="/about">О компании</Link>
+            <Link href="/catalog">Каталог</Link>
+            <Link href="/discount">Акции</Link>
             <div className="shrink-0 mx-4">
               <Link href="/">
                 <Image
@@ -70,50 +74,91 @@ const Header: React.FC = () => {
                   alt="logo"
                   width={90}
                   height={100}
-                  className={`transition-all duration-300 ${
-                    scrolled ? "w-[50px] h-[60px]" : "w-[90px] h-[100px]"
-                  }`}
+                  className={`transition-all duration-300 ${scrolled ? "w-[50px] h-[60px]" : "w-[90px] h-[100px]"
+                    }`}
                 />
               </Link>
             </div>
-            <Link
-              href="/restesption"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              Рецепты
-            </Link>
-            <Link
-              href="/vacantion"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              Вакансии
-            </Link>
-            <Link
-              href="/contact"
-              className={scrolled ? "text-lg" : "text-[20px]"}
-            >
-              Контакты
-            </Link>
+
+            <Link href="/restesption">Рецепты</Link>
+            <Link href="/vacantion">Вакансии</Link>
+            <Link href="/contact">Контакты</Link>
           </ul>
         </div>
-        <div
-          className={`${
-            scrolled ? "text-lg" : "text-[20px]"
-          } flex items-center gap-2 text-white`}
-        >
-          <Image src={Rusian} alt="language" width={25} height={25} />
-          <select className="Languages">
-            <option value="ru" className="text-black">
-              Русский
-            </option>
-            <option value="en" className="text-black">
-              English
-            </option>
-            <option value="uz" className="text-black">
-              Uzbek
-            </option>
-          </select>
+
+        {/* Mobile Logo (Center) */}
+        <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
+          <Link href="/">
+            <Image
+              src={Shumbola}
+              alt="logo"
+              width={50}
+              height={60}
+              className={`transition-all duration-300 ${scrolled ? "w-[35px] h-[45px]" : "w-[50px] h-[60px]"
+                }`}
+            />
+          </Link>
         </div>
+
+        {/* Right Side: Language & Search */}
+        <div className="flex items-center gap-2 text-white">
+          {/* Mobile Search Icon */}
+          <button className="lg:hidden flex items-center justify-center cursor-pointer mr-2">
+            <Image src={Search} alt="search" width={32} height={32} />
+          </button>
+          <div
+            className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}
+          >
+            <Image src={Rusian} alt="language" width={25} height={25} />
+            <select className="Languages bg-transparent border-none outline-none text-white option:text-black cursor-pointer">
+              <option value="ru" className="text-black">
+                Русский
+              </option>
+              <option value="en" className="text-black">
+                English
+              </option>
+              <option value="uz" className="text-black">
+                Uzbek
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`lg:hidden fixed top-[80px] left-0 w-full bg-[#368BC6] backdrop-blur-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-screen opacity-100 py-6" : "max-h-0 opacity-0 py-0"
+          } ${scrolled ? "top-[60px]" : "top-[80px]"}`}
+      >
+        <ul className="flex flex-col items-center gap-6 text-white text-lg">
+          <Link href="/about" onClick={toggleMenu}>
+            О компании
+          </Link>
+          <Link href="/catalog" onClick={toggleMenu}>
+            Каталог
+          </Link>
+          <Link href="/discount" onClick={toggleMenu}>
+            Акции
+          </Link>
+          <Link href="/restesption" onClick={toggleMenu}>
+            Рецепты
+          </Link>
+          <Link href="/vacantion" onClick={toggleMenu}>
+            Вакансии
+          </Link>
+          <Link href="/contact" onClick={toggleMenu}>
+            Контакты
+          </Link>
+
+          <div className="flex gap-6 mt-4">
+            <Link href="https://youtube.com/">
+              <Image src={Telegram} alt="telegram" width={30} height={30} />
+            </Link>
+            <Link href="#">
+              <Image src={Facebook} alt="facebook" width={30} height={30} />
+            </Link>
+          </div>
+        </ul>
       </div>
     </header>
   );

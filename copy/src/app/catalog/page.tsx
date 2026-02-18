@@ -1,0 +1,28 @@
+import Header from "@/components/header";
+import Begin from "@/components/name";
+import MainImg from "@/assets/images/catalog/main.png";
+import Footer from "@/components/footer";
+import CatalogSec from "@/components/catalog/catalog-sec";
+
+const Catalog = () => {
+  return (
+    <div>
+      <header>
+        <Header />
+        <Begin image={MainImg} />
+      </header>
+
+      <main className="max-w-[1920px] w-[80%] mx-auto mt-30">
+        <section>
+          <CatalogSec />
+        </section>
+      </main>
+
+      <footer className="mt-[200px]">
+        <Footer />
+      </footer>
+    </div>
+  );
+};
+
+export default Catalog;

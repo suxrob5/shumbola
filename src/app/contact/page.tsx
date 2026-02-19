@@ -1,3 +1,4 @@
+
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Begin from "@/components/name";

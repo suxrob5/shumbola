@@ -66,7 +66,7 @@ const Header: React.FC = () => {
           >
             <Link href="/about">О компании</Link>
             <Link href="/catalog">Каталог</Link>
-            <Link href="/discount">Акции</Link>
+
             <div className="shrink-0 mx-4">
               <Link href="/">
                 <Image
@@ -79,9 +79,9 @@ const Header: React.FC = () => {
                 />
               </Link>
             </div>
-
-            <Link href="/restesption">Рецепты</Link>
-            <Link href="/vacantion">Вакансии</Link>
+            <Link href="/discount">Акции</Link>
+            {/* <Link href="/restesption">Рецепты</Link>
+            <Link href="/vacantion">Вакансии</Link> */}
             <Link href="/contact">Контакты</Link>
           </ul>
         </div>
@@ -140,12 +140,12 @@ const Header: React.FC = () => {
           <Link href="/discount" onClick={toggleMenu}>
             Акции
           </Link>
-          <Link href="/restesption" onClick={toggleMenu}>
+          {/* <Link href="/restesption" onClick={toggleMenu}>
             Рецепты
           </Link>
           <Link href="/vacantion" onClick={toggleMenu}>
             Вакансии
-          </Link>
+          </Link> */}
           <Link href="/contact" onClick={toggleMenu}>
             Контакты
           </Link>

@@ -6,10 +6,13 @@ import Image from "next/image";
 const MiniInform = () => {
   return (
     <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4 mt-16 md:mt-20">
-      {InformData.map((item) => (
+      {InformData.map((item, index) => (
         <div
           key={item.id}
           className="bg-[#E8F1F9] w-full h-auto px-6 py-4 gap-1 rounded-2xl"
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay={index * 100}
         >
           <div>
             <Image

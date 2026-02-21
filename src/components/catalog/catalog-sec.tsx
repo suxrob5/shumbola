@@ -7,10 +7,13 @@ const CatalogSec = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
       {catalogData ? (
-        catalogData.map((item) => (
+        catalogData.map((item, index) => (
           <div
             key={item.id}
             className="group relative overflow-hidden rounded-3xl bg-[#E8F1F9] h-[300px] md:h-[400px] lg:h-[450px] cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay={index * 120}
           >
             {/* Rasm - Fon sifatida */}
             <Image

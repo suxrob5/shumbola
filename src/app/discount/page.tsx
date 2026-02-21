@@ -9,7 +9,11 @@ const Discount = () => {
         <Header />
         <Begin image={MainImg} />
         <main className="mt-[200px] flex justify-center items-center">
-          <h1 className="text-3xl text-gray-400 font-semibold">
+          <h1
+            className="text-3xl text-gray-400 font-semibold"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
             На данный момент акций нет
           </h1>
         </main>
@@ -22,3 +26,4 @@ const Discount = () => {
 };
 
 export default Discount;
+

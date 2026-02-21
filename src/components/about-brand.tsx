@@ -5,7 +5,11 @@ import Image from "next/image";
 const AboutBrand = () => {
   return (
     <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-      <div className="shrink-0">
+      <div
+        className="shrink-0"
+        data-aos="fade-right"
+        data-aos-duration="800"
+      >
         <Image
           src={About}
           alt="About Shumbola"
@@ -14,7 +18,12 @@ const AboutBrand = () => {
           className="w-full max-w-[330px] h-auto rounded-lg"
         />
       </div>
-      <div className="text-center lg:text-left">
+      <div
+        className="text-center lg:text-left"
+        data-aos="fade-left"
+        data-aos-duration="800"
+        data-aos-delay="150"
+      >
         <h2 className="text-3xl md:text-4xl font-bold">О бренде</h2>
         <p className="text-base md:text-[19px] text-[#484D53] mt-5 leading-relaxed">
           Бренд Shumbola основан в 2010 году как небольшая семейная компания из

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
 
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex justify-center sm:justify-start" data-aos="fade-up" data-aos-delay="0">
             <Image
               src={MainImg}
               alt="img"
@@ -20,7 +20,7 @@ const Footer = () => {
               className=" mix-blend-multiply"
             />
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left" data-aos="fade-up" data-aos-delay="100">
             <h3 className="text-xl md:text-2xl font-bold mb-4">Раздел</h3>
             <div className="space-y-2">
               <p className="text-[#393F48] text-base md:text-[18px]">
@@ -32,7 +32,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left" data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-transparent sm:text-black hidden sm:block">
               ‎{" "}
             </h3>
@@ -44,7 +44,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="300">
             <div className="text-center sm:text-left">
               <h3 className="text-xl md:text-2xl font-bold mb-4">Контакты</h3>
               <div className="flex flex-col gap-3 items-center sm:items-start">
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             {/* defgerf */}
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Контакты</h3>
             <div className="flex flex-col gap-3 items-center sm:items-start">
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
       {/* created */}
-      <div className="bg-[#E8F1F9] mt-10">
+      <div className="bg-[#E8F1F9] mt-10" >
         <h1 className="text-[#368BC6] p-3 text-center">
           Copyright © 2025, Shumbola production
         </h1>

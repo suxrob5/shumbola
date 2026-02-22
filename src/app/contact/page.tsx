@@ -16,22 +16,22 @@ const Contact = () => {
         <Header />
       </header>
       <Begin image={MainImg} />
-      <main className="mx-auto max-w-[1920px] w-[80%] mt-10 md:mt-20 flex items-center justify-between">
+      <main className="mx-auto max-w-[1920px] w-[80%] mt-10 md:mt-20 flex justify-between items-center">
         {/* Contact input */}
-        <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-10 w-full md:w-[64%]" data-aos="" data-aos-duration="700">
+        <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-5 md:px-10 w-full md:w-[64%] max-h-[600px] h-[520px]">
           <h1 className="text-2xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">
             Оставьте заявку, мы с вами свяжемся
           </h1>
           <div className="flex items-center justify-between">
             {/* Input form */}
-            <form className=" flex flex-col gap-4">
+            <form className=" flex flex-col gap-4 w-full">
               <div data-aos="fade-up" data-aos-delay="200" className="w-full">
                 <FieldLabel htmlFor="fish" className="text-base">ФИО:</FieldLabel>
                 <Input
                   id="fish"
                   type="text"
                   placeholder="Введите..."
-                  className="md:text-[18px] h-[50px] text-base bg-white border-none mt-2 w-full"
+                  className="md:text-[16px] h-[50px] text-base bg-white border-none mt-1 w-full"
                 />
               </div>
               <div className="flex items-center justify-between gap-4" data-aos="fade-up" data-aos-delay="300">
@@ -41,7 +41,7 @@ const Contact = () => {
                     id="phone"
                     type="number"
                     placeholder="Введите..."
-                    className="md:text-[18px] h-[50px] text-base bg-white border-none mt-3 w-full"
+                    className="md:text-[16px] h-[50px] text-base bg-white border-none mt-3 w-full"
                   />
                 </div>
                 <div className="w-full">
@@ -50,13 +50,13 @@ const Contact = () => {
                     id="email"
                     type="text"
                     placeholder="Введите..."
-                    className="md:text-[18px] h-[50px] text-base bg-white border-none mt-2 w-full"
+                    className="md:text-[16px] h-[50px] text-base bg-white border-none mt-2 w-full"
                   />
                 </div>
               </div>
               <div className="w-full">
                 <FieldLabel htmlFor="comment" className="text-base">Сообщение:</FieldLabel>
-                <Textarea id="comment" name="comment" placeholder="Введите..." className="md:text-[18px] h-[200px] text-base bg-white border-none mt-2 w-full" />
+                <Textarea id="comment" name="comment" placeholder="Введите..." className="md:text-[16px] h-[100px] text-base bg-white border-none mt-2 w-full" />
               </div>
               <div data-aos="fade-up" data-aos-delay="400">
                 <button
@@ -72,7 +72,7 @@ const Contact = () => {
         </div>
         {/* About contact */}
         <div className="w-full md:w-[35%]">
-          <div className=" flex flex-col gap-4 mt-5">
+          <div className=" flex flex-col gap-4">
             <div className="bg-[#E8F1F9] p-4 rounded-xl">
               <div className="flex items-center justify-start ">
                 <PhoneCall color="#368BC6" size={20} className="mr-2" />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import AOSProvider from "@/components/aos-provider";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AOSProvider />
         {children}
+        <Analytics />
       </body>
     </html>
   );

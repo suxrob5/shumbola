@@ -15,7 +15,7 @@ const Home = () => {
         <Header />
       </div>
       {/* Baner side */}
-      <div className="relative w-full h-[500px] md:h-auto" data-aos="fade-in" data-aos-duration="1000">
+      <div className="relative w-full h-[500px] md:h-auto" data-aos="fade-in">
         <Image
           src={Baner}
           alt="baner"

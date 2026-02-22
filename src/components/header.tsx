@@ -26,7 +26,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50
+      className={`fixed top-0 left-0 max-w-full w-full z-50
         transition-all duration-300 border-b border-blue-300/30
         backdrop-blur-md bg-[#368BC6]/70
         ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}

@@ -7,8 +7,10 @@ const AboutBrand = () => {
     <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       <div
         className="shrink-0"
-        data-aos="fade-right"
+        data-aos="fade-up"
         data-aos-duration="800"
+        data-aos-delay="100"
+
       >
         <Image
           src={About}
@@ -20,7 +22,7 @@ const AboutBrand = () => {
       </div>
       <div
         className="text-center lg:text-left"
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-duration="800"
         data-aos-delay="150"
       >

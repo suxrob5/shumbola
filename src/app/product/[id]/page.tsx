@@ -33,7 +33,11 @@ const ProductId = async (props: {
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
 
             {/* Rasm qismi */}
-            <div className="w-full lg:w-[45%] flex justify-center">
+            <div
+              className="w-full lg:w-[45%] flex justify-center"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               <div className="relative w-full max-w-[500px] aspect-square">
                 <Image
                   src={product.imageUrl}
@@ -47,15 +51,29 @@ const ProductId = async (props: {
 
             {/* Ma'lumotlar qismi */}
             <div className="w-full lg:w-[50%] flex flex-col">
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+              <h1
+                className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight"
+                data-aos="fade-left"
+                data-aos-duration="800"
+              >
                 {product.name}
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 mt-6 leading-relaxed">
+              <p
+                className="text-base md:text-xl text-gray-600 mt-6 leading-relaxed"
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="200"
+              >
                 {product.description}
               </p>
 
-              <div className="mt-10">
+              <div
+                className="mt-10"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="400"
+              >
                 <p className="text-xl font-semibold text-gray-800 mb-4">
                   O'lchamni tanlang (Sizes):
                 </p>
@@ -77,7 +95,12 @@ const ProductId = async (props: {
               </div>
 
               {/* Qo'shimcha ma'lumot uchun joy (masalan narx yoki buyurtma tugmasi) */}
-              <div className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+              <div
+                className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="600"
+              >
                 <p className="text-blue-800 font-medium italic">
                   * Mahsulotimiz tabiiy va sifatli xomashyodan tayyorlangan.
                 </p>

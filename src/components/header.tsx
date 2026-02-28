@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 // Images
 import Search from "../../public/search.png";
 import Telegram from "../assets/icons/tg-blue.png";
-import Instagram from "../assets/icons/insta-blue.svg";
+import Instagram from "../assets/icons/insta.png";
 import Rusian from "../assets/icons/ru.png";
 // import Shumbola from "../assets/icons/shumbola_red.png";
 import Shumbola from "../assets/icons/main.png";

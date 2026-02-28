@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
           <Link href="/" className="flex justify-center sm:justify-start" data-aos="fade-up">
-            <Image src={MainImg} alt="logo" width={150} className="mix-blend-multiply cursor-pointer hover:opacity-80 transition-opacity h-[140px]" />
+            <Image src={MainImg} alt="logo" width={120} className="mix-blend-multiply cursor-pointer hover:opacity-80 transition-opacity h-[140px]" />
           </Link>
 
           {[SECTIONS_LEFT, SECTIONS_RIGHT].map((section, i) => (

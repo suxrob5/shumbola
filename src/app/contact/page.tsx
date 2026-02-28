@@ -2,7 +2,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Begin from "@/components/name";
-import MainImg from "@/assets/images/contact.png";
+import MainImg from "@/assets/images/contact/contact.png";
 import { FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";

@@ -49,7 +49,7 @@ const BannerCarousel = () => {
                             className="object-cover"
                             priority={index === 0}
                         />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/20 flex items-end justify-center pb-16 md:pb-24">
                             <h1
                                 className="text-center text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl px-4 drop-shadow-2xl"
                                 data-aos="fade-up"

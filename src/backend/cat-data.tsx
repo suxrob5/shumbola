@@ -14,6 +14,17 @@ import YerYongoqP from "@/assets/images/products/yer_yongok.jpg";
 import KajuP from "@/assets/images/products/kaju.jpg";
 import { CtType } from "@/types/types";
 
+
+// 1Qurt   tosh qurt oddiy
+// 2Sluguni acchiq shirin
+// 3Xamdom Pista chaqilga oddiy
+// 4Bodom
+// 5Kaju
+// 6Yer yongoq
+// 7Orik danak
+// 8Pista tuzli tuzsiz
+
+
 export const catalogData: CtType = [
   {
     id: 1, //qurt

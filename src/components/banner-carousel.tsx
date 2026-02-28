@@ -51,7 +51,7 @@ const BannerCarousel = () => {
                         />
                         <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                             <h1
-                                className="text-center font-black text-4xl sm:text-6xl md:text-7xl lg:text-9xl px-4 drop-shadow-2xl bg-linear-to-r from-black from-50% to-[#D32F2F] to-50% bg-clip-text text-transparent uppercase tracking-wider"
+                                className="text-center font-black text-4xl sm:text-6xl md:text-7xl lg:text-9xl px-4 drop-shadow-2xl bg-linear-to-r from-black to-[#D32F2F] bg-clip-text text-transparent uppercase tracking-wider"
                                 data-aos="fade-up"
                             >
                                 {slide.title.split(" — ")[0]}

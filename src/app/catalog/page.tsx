@@ -12,7 +12,7 @@ const Catalog = () => {
       </header>
       <Begin image={MainImg} />
 
-      <main className="max-w-[1920px] w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 lg:mt-30 grow">
+      <main className="max-w-[1920px] w-[90%] md:w-[70%] mx-auto mt-10 md:mt-20 lg:mt-30 grow">
         <section>
           <CatalogSec />
         </section>

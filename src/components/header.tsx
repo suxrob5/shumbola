@@ -11,7 +11,7 @@ import Telegram from "../assets/icons/tg-blue.png";
 import Instagram from "../assets/icons/insta-blue.svg";
 import Rusian from "../assets/icons/ru.png";
 // import Shumbola from "../assets/icons/shumbola_red.png";
-import Shumbola from "../assets/images/main.png";
+import Shumbola from "../assets/icons/main.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -37,10 +37,10 @@ const Header: React.FC = () => {
       <div className="max-w-[90%] mx-auto flex items-center justify-between w-full h-full">
         {/* Left Side: Socials (Desktop) */}
         <div className="hidden lg:flex items-center gap-4">
-          <Link href="https://t.me/shumbolauzz" target="_blank">
+          <Link href="https://t.me/shumbolauzz" target="_blank" className="hover:scale-110 transition-transform duration-300">
             <Image src={Telegram} alt="telegram" width={25} height={25} />
           </Link>
-          <Link href="https://www.instagram.com/shumbola.uz/" target="_blank">
+          <Link href="https://www.instagram.com/shumbola.uz/" target="_blank" className="hover:scale-110 transition-transform duration-300">
             <Image src={Instagram} alt="Instagram" width={25} height={25} />
           </Link>
         </div>
@@ -57,11 +57,11 @@ const Header: React.FC = () => {
           <ul
             className={`flex items-center justify-between gap-5 text-[#368BC6] ${scrolled ? "text-lg" : "text-[20px]"}`}
           >
-            <Link href="/about">О компании</Link>
-            <Link href="/catalog">Каталог</Link>
+            <Link href="/about" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">О компании</Link>
+            <Link href="/catalog" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Каталог</Link>
 
             <div className="shrink-0 mx-4">
-              <Link href="/">
+              <Link href="/" className="hover:scale-110 transition-transform duration-300 block">
                 <Image
                   src={Shumbola}
                   alt="logo"
@@ -72,16 +72,16 @@ const Header: React.FC = () => {
                 />
               </Link>
             </div>
-            <Link href="/discount">Акции</Link>
+            <Link href="/discount" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Акции</Link>
             {/* <Link href="/restesption">Рецепты</Link>
             <Link href="/vacantion">Вакансии</Link> */}
-            <Link href="/contact">Контакты</Link>
+            <Link href="/contact" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Контакты</Link>
           </ul>
         </div>
 
         {/* Mobile Logo (Center) */}
         <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
-          <Link href="/">
+          <Link href="/" className="hover:scale-110 transition-transform duration-300 block">
             <Image
               src={Shumbola}
               alt="logo"

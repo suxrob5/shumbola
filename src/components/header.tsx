@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 
 // Images
 import Search from "../../public/search.png";
-import Telegram from "../assets/icons/telegram.png";
-import Instagram from "../assets/icons/insta.svg";
+import Telegram from "../assets/icons/tg-blue.png";
+import Instagram from "../assets/icons/insta-blue.svg";
 import Rusian from "../assets/icons/ru.png";
 // import Shumbola from "../assets/icons/shumbola_red.png";
 import Shumbola from "../assets/images/main.png";
@@ -24,13 +24,13 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-        // ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
+  // ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
 
   return (
     <header
       className={`fixed top-0 left-0 max-w-full w-full z-50
         transition-all duration-300 border-b border-blue-300/30
-        backdrop-blur-md bg-[#368BC6]/70
+        backdrop-blur-md bg-[#FEF6E1]/70
         ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
       `}
     >
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Hamburger Button */}
         <div className="lg:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white p-2">
+          <button onClick={toggleMenu} className="text-[#368BC6] p-2">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
         {/* Center: Navigation (Desktop) */}
         <div className="hidden lg:flex items-center gap-5">
           <ul
-            className={`flex items-center justify-between gap-5 text-white ${scrolled ? "text-lg" : "text-[20px]"}`}
+            className={`flex items-center justify-between gap-5 text-[#368BC6] ${scrolled ? "text-lg" : "text-[20px]"}`}
           >
             <Link href="/about">О компании</Link>
             <Link href="/catalog">Каталог</Link>
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Right Side: Language & Search */}
-        <div className="flex items-center gap-2 text-white">
+        <div className="flex items-center gap-2 text-[#368BC6]">
           {/* Mobile Search Icon */}
           <button className="lg:hidden flex items-center justify-center cursor-pointer mr-2">
             <Image src={Search} alt="search" width={32} height={32} />
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
             className={`${scrolled ? "text-lg" : "text-[20px]"} hidden sm:flex items-center gap-2`}
           >
             <Image src={Rusian} alt="language" width={25} height={25} />
-            <select className="Languages bg-transparent border-none outline-none text-white option:text-black cursor-pointer">
+            <select className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium">
               <option value="ru" className="text-black">
                 Русский
               </option>
@@ -120,10 +120,10 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed top-[80px] left-0 w-full bg-[#368BC6] backdrop-blur-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-screen opacity-100 py-6" : "max-h-0 opacity-0 py-0"
+        className={`lg:hidden fixed top-[80px] left-0 w-full bg-[#FEF6E1] backdrop-blur-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-screen opacity-100 py-6" : "max-h-0 opacity-0 py-0"
           } ${scrolled ? "top-[60px]" : "top-[80px]"}`}
       >
-        <ul className="flex flex-col items-center gap-6 text-white text-lg">
+        <ul className="flex flex-col items-center gap-6 text-[#368BC6] text-lg font-semibold">
           <Link href="/about" onClick={toggleMenu}>
             О компании
           </Link>
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
             className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}
           >
             <Image src={Rusian} alt="language" width={25} height={25} />
-            <select className="Languages bg-transparent border-none outline-none text-white option:text-black cursor-pointer">
+            <select className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium">
               <option value="ru" className="text-black">
                 Русский
               </option>

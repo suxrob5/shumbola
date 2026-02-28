@@ -49,13 +49,19 @@ const BannerCarousel = () => {
                             className="object-cover"
                             priority={index === 0}
                         />
-                        <div className="absolute inset-0 bg-black/20 flex items-end justify-center pb-16 md:pb-24">
+                        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                             <h1
                                 className="text-center text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl px-4 drop-shadow-2xl"
                                 data-aos="fade-up"
                             >
-                                {slide.title} <br className="hidden sm:block" /> {slide.subtitle}
+                                {slide.title.split(" — ")[0]}
                             </h1>
+                            <div
+                                className="absolute bottom-12 md:bottom-20 text-center text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-4 drop-shadow-2xl mb-8"
+                                data-aos="fade-up"
+                            >
+                                {slide.title.includes(" — ") ? slide.title.split(" — ")[1] : ""} {slide.subtitle}
+                            </div>
                         </div>
                     </div>
                 ))}

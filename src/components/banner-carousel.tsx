@@ -50,15 +50,20 @@ const BannerCarousel = () => {
                             priority={index === 0}
                         />
                         <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <h1
-                                className="text-center text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl px-4 drop-shadow-2xl"
-                                data-aos="fade-up"
+                            <div
+                                className="bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 sm:px-12 sm:py-6 rounded-[2rem] sm:rounded-[3rem] shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                                data-aos="zoom-in"
                             >
-                                {slide.title.split(" — ")[0]}
-                            </h1>
+                                <h1
+                                    className="text-center text-white font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-9xl drop-shadow-2xl uppercase tracking-[0.1em] sm:tracking-[0.2em]"
+                                >
+                                    {slide.title.split(" — ")[0]}
+                                </h1>
+                            </div>
                             <div
                                 className="absolute bottom-12 md:bottom-20 text-center text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-4 drop-shadow-2xl mb-8"
                                 data-aos="fade-up"
+                                data-aos-delay="300"
                             >
                                 {slide.title.includes(" — ") ? slide.title.split(" — ")[1] : ""} {slide.subtitle}
                             </div>

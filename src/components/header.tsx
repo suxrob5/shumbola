@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 // Images
-import Search from "../../public/search.png";
 import Telegram from "../assets/icons/tg-blue.png";
 import Instagram from "../assets/icons/insta.png";
 import Rusian from "../assets/icons/ru.png";
@@ -87,7 +86,7 @@ const Header: React.FC = () => {
               alt="logo"
               width={50}
               height={60}
-              className={`transition-all duration-300 ${scrolled ? "w-[35px] h-[45px]" : "w-[50px] h-[60px]"
+              className={`transition-all duration-300 ${scrolled ? "w-[45px] h-[45px]" : "w-[60px] h-[60px]"
                 }`}
             />
           </Link>
@@ -95,10 +94,6 @@ const Header: React.FC = () => {
 
         {/* Right Side: Language & Search */}
         <div className="flex items-center gap-2 text-[#368BC6]">
-          {/* Mobile Search Icon */}
-          <button className="lg:hidden flex items-center justify-center cursor-pointer mr-2">
-            <Image src={Search} alt="search" width={32} height={32} />
-          </button>
           <div
             className={`${scrolled ? "text-lg" : "text-[20px]"} hidden sm:flex items-center gap-2`}
           >

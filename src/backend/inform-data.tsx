@@ -7,7 +7,7 @@ import Image5 from "@/assets/icons/5.png";
 export const InformData = [
   {
     id: 1,
-    number: "100000+",
+    number: "10000+",
     about: "Продано",
     imageUrl: Image1,
     more: "Более миллиона единиц продукции реализовано.",
@@ -22,7 +22,7 @@ export const InformData = [
   {
     id: 3,
     number: "12",
-    about: "Страны",
+    about: "Область",
     imageUrl: Image3,
     more: "Мы экспортируем продукцию в 10 областей.",
   },

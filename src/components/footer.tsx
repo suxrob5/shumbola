@@ -1,6 +1,7 @@
 import MainImg from "@/assets/images/footerImg.png";
 import Telegram from "@/assets/icons/tg-blue.png";
 import Facebook from "@/assets/icons/facebook-blue.png";
+import Instagram from "@/assets/icons/insta-blue.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,8 @@ const SECTIONS_RIGHT = [
 
 const SOCIALS = [
   { name: "tg", icon: Telegram, href: "https://t.me/shumbolauzz" },
-  { name: "fb", icon: Facebook, href: "https://www.instagram.com/shumbola.uz/" },
+  { name: "fb", icon: Facebook, href: "https://www.facebook.com/shumbola.uz/" },
+  { name: "insta", icon: Instagram, href: "https://www.instagram.com/shumbola.uz/" },
 ];
 
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (

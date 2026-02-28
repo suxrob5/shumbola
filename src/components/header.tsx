@@ -10,7 +10,8 @@ import Search from "../../public/search.png";
 import Telegram from "../assets/icons/telegram.png";
 import Instagram from "../assets/icons/insta.svg";
 import Rusian from "../assets/icons/ru.png";
-import Shumbola from "../assets/icons/shumbola_red.png";
+// import Shumbola from "../assets/icons/shumbola_red.png";
+import Shumbola from "../assets/images/main.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -23,6 +24,7 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+        // ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
 
   return (
     <header
@@ -65,7 +67,7 @@ const Header: React.FC = () => {
                   alt="logo"
                   width={90}
                   height={100}
-                  className={`transition-all duration-300 ${scrolled ? "w-[45px] h-[60px]" : "w-[70px] h-[90px]"
+                  className={`transition-all duration-300 ${scrolled ? "w-[60px] h-[60px]" : "w-[90px] h-[90px]"
                     }`}
                 />
               </Link>

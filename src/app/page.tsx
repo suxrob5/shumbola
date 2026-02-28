@@ -23,7 +23,7 @@ const Home = () => {
           priority
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-center text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl px-4 drop-shadow-md" data-aos="fade-up">
+          <h1 className="text-center text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl px-4 drop-shadow-2xl" data-aos="fade-up">
             Shumbola — с 2023 года <br className="hidden sm:block" /> ваши
             любимые снеки
           </h1>

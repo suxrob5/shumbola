@@ -8,9 +8,9 @@ import { Menu, X } from "lucide-react";
 // Images
 import Search from "../../public/search.png";
 import Telegram from "../assets/icons/telegram.png";
-import Facebook from "../assets/icons/facebook.png";
+import Instagram from "../assets/icons/insta.svg";
 import Rusian from "../assets/icons/ru.png";
-import Shumbola from "../assets/icons/shumbola.png";
+import Shumbola from "../assets/icons/shumbola_red.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -29,26 +29,17 @@ const Header: React.FC = () => {
       className={`fixed top-0 left-0 max-w-full w-full z-50
         transition-all duration-300 border-b border-blue-300/30
         backdrop-blur-md bg-[#368BC6]/70
-        ${scrolled ? "h-[60px] lg:h-[100px]" : "h-[80px] lg:h-[100px]"}
+        ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
       `}
     >
       <div className="max-w-[90%] mx-auto flex items-center justify-between w-full h-full">
         {/* Left Side: Socials (Desktop) */}
         <div className="hidden lg:flex items-center gap-4">
-          <button className="flex items-center justify-center cursor-pointer">
-            <Image
-              src={Search}
-              alt="search"
-              width={48}
-              height={48}
-              className="w-[40px] h-[40px]"
-            />
-          </button>
-          <Link href="https://youtube.com/">
+          <Link href="https://t.me/shumbolauzz" target="_blank">
             <Image src={Telegram} alt="telegram" width={25} height={25} />
           </Link>
-          <Link href="#">
-            <Image src={Facebook} alt="facebook" width={25} height={25} />
+          <Link href="https://www.instagram.com/shumbola.uz/" target="_blank">
+            <Image src={Instagram} alt="Instagram" width={25} height={25} />
           </Link>
         </div>
 
@@ -74,7 +65,7 @@ const Header: React.FC = () => {
                   alt="logo"
                   width={90}
                   height={100}
-                  className={`transition-all duration-300 ${scrolled ? "w-[50px] h-[60px]" : "w-[90px] h-[100px]"
+                  className={`transition-all duration-300 ${scrolled ? "w-[45px] h-[60px]" : "w-[70px] h-[90px]"
                     }`}
                 />
               </Link>
@@ -155,7 +146,7 @@ const Header: React.FC = () => {
               <Image src={Telegram} alt="telegram" width={30} height={30} />
             </Link>
             <Link href="#">
-              <Image src={Facebook} alt="facebook" width={30} height={30} />
+              <Image src={Instagram} alt="Instagram" width={30} height={30} />
             </Link>
 
           </div>

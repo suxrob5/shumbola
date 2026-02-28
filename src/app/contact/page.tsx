@@ -78,8 +78,8 @@ const Contact = () => {
               <h1 className="text-[#393F48] text-[18px]">Телефон:</h1>
             </div>
             <div className="grid grid-cols-1">
-              <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
-              <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
+              <Link href="tel:+998339222122" className="font-bold text-xl">+998 33 922 21 22</Link>
+              <Link href="tel:+998983315155" className="font-bold text-xl">+998 98 331 51 55</Link>
             </div>
           </div>
           <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="200">

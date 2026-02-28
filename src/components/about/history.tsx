@@ -49,23 +49,7 @@ const History = () => {
         </div>
       </div>
 
-      {/* 2. Creator - Direktor qismi */}
-      <div className="mt-20 md:mt-40 w-[90%] md:w-[80%] max-w-[1920px] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-40">
-        <div className="w-full md:w-[55%]" data-aos="zoom-in" data-aos-duration="800">
-          <p className="text-[#484D53] text-sm md:text-base leading-relaxed italic">
-            «Производство продуктов питания – процесс сложный и ответственный...»
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold mt-6">Kasimov Baxtiyor</h1>
-          <p className="text-[#484D53]">Директор компании Shumbola</p>
-        </div>
-        <div className="w-[60%] md:w-[35%] lg:w-[30%]" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-          <Image
-            src={Creator}
-            alt="creator"
-            className="w-full h-auto rounded-full md:rounded-2xl"
-          />
-        </div>
-      </div>
+    
 
       {/* 3. Foto about - Fotootchet */}
       <div className="mt-20 md:mt-30 w-[90%] md:w-[80%] max-w-[1920px] mx-auto pb-20">

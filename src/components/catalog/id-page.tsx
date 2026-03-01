@@ -32,7 +32,7 @@ const IdPage = ({ item }: any) => {
               <div
                 className={`
                   rounded-xl p-4 h-[80px] flex items-center justify-center text-center transition-all duration-300
-                  ${isActive ? "bg-[#E8F1F9] text-[#368BC6] shadow-sm" : "bg-[#EFF2F5] hover:bg-gray-200"}
+                  ${isActive ? "bg-[#368BC6] text-white shadow-md scale-105" : "bg-white text-[#368BC6] hover:bg-gray-100 border border-[#368BC6]/20"}
                 `}
               >
                 <h1 className="text-sm md:text-base font-semibold">
@@ -53,7 +53,7 @@ const IdPage = ({ item }: any) => {
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl bg-gray-50">
+            <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl bg-white shadow-sm border border-[#368BC6]/10">
               <Image
                 src={product.imageUrl}
                 alt={product.name}

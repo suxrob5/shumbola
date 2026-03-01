@@ -1,64 +1,58 @@
-import QurtP from "@/assets/images/products/qurt.jpg";
-import ToshQurtP from "@/assets/images/products/tosh_qurt.jpg";
-import BodomP from "@/assets/images/products/bodom.jpg";
-import OrikDanakP from "@/assets/images/products/orik_danak.jpg";
-import YerYongoqP from "@/assets/images/products/yer_yongok.jpg";
-import KajuP from "@/assets/images/products/kaju.jpg";
+import QurtP from "@/assets/images/products/qurt.png";
+import ToshQurtP from "@/assets/images/products/tosh-qurt.png";
+import BodomP from "@/assets/images/products/bodom.png";
+import OrikDanakP from "@/assets/images/products/orik-danak.png";
+import YerYongoqP from "@/assets/images/products/yer-yongogi.png";
+import KeshuP from "@/assets/images/products/keshu.png";
 import { ProductType } from "@/types/types";
 
 export const ProductData: ProductType[] = [
   {
     id: 100,
-    name: "Qurt",
+    name: "Курт",
     imageUrl: QurtP,
-    // url: "/qurt", // Removed as it wasn't in the ProductType interface, but checking if needed
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Курт — это традиционный натуральный и полезный молочный продукт. Курт имеет круглую форму, белый цвет и упакован в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный: на передней части изображён логотип улыбающегося ребёнка, название «SHUMBOLA QURT», а также информация о производителе. Продукт размещён в нескольких небольших пакетах, установленных на картонном стенде, что очень удобно для продажи на прилавках магазинов. Курт долго хранится, является питательным и полезным продуктом, особенно подходит для употребления в дороге или в качестве лёгкого перекуса. В целом, Shumbola Qurt — это качественный продукт, который сохраняет традиционный национальный вкус и удобен для повседневного употребления.",
   },
   {
     id: 103,
-    name: "Tosh qurt",
+    name: "Твердый курт",
     imageUrl: ToshQurtP,
-    // url: "/tosh_qurt",
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Курт — это традиционный натуральный и полезный молочный продукт. Курт имеет круглую форму, белый цвет и упакован в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный: на передней части изображён логотип улыбающегося ребёнка, название «SHUMBOLA QURT», а также информация о производителе. Продукт размещён в нескольких небольших пакетах, установленных на картонном стенде, что очень удобно для продажи на прилавках магазинов. Курт долго хранится, является питательным и полезным продуктом, особенно подходит для употребления в дороге или в качестве лёгкого перекуса. В целом, Shumbola Qurt — это качественный продукт, который сохраняет традиционный национальный вкус и удобен для повседневного употребления.",
   },
   {
     id: 106,
-    name: "Bodom",
+    name: "Миндаль",
     imageUrl: BodomP,
-    // url: "/bodom",
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Миндаль — это натуральный и полезный продукт. Тщательно отобранные ядра миндаля упакованы в качественную упаковку Shumbola. Это отличный источник энергии и питательных веществ, идеально подходящий для здорового перекуса.",
   },
   {
     id: 109,
-    name: "O'rik Danak",
+    name: "Абрикосовая косточка",
     imageUrl: OrikDanakP,
-    // url: "/orik_danak",
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Абрикосовые косточки — это традиционное восточное лакомство, обладающее уникальным вкусом и множеством полезных свойств. Мы используем только натуральное сырье и качественную упаковку Shumbola для вашего удовольствия.",
   },
   {
     id: 112,
-    name: "Yer Yong'oq",
+    name: "Арахис",
     imageUrl: YerYongoqP,
-    // url: "/yer_yongoq",
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Арахис — это питательный и вкусный продукт, приготовленный из отборного сырья. Продукт упакован в удобную упаковку Shumbola, которая сохраняет свежесть и аромат орехов. Идеально подходит для быстрого перекуса.",
   },
   {
     id: 115,
-    name: "Kaju",
-    imageUrl: KajuP,
-    // url: "/kaju",
+    name: "Кешью",
+    imageUrl: KeshuP,
     sizes: [20, 30, 50],
     description:
-      "Qurt — an’anaviy usulda tayyorlangan, tabiiy va foydali sut mahsuloti. Qurtlar dumaloq shaklda bo‘lib, oq rangga ega va maxsus shaffof qadoqlarda joylangan. Qadoq dizayni sodda va chiroyli: old qismida kulib turgan bola logotipi, “SHUMBOLA QURT” nomi hamda ishlab chiqaruvchi haqida ma’lumotlar berilgan. Mahsulot bir nechta kichik paketlarda karton stendga joylashtirilgan bo‘lib, do‘kon peshtaxtalarida sotish uchun juda qulay. Qurt uzoq saqlanadi, to‘yimli va foydali bo‘lib, ayniqsa sayohat paytida yoki yengil tamaddi sifatida iste’mol qilishga mos. Umuman olganda, Shumbola Qurt — sifatli, milliy ta’mni o‘zida mujassam etgan va kundalik iste’mol uchun qulay mahsulot.",
+      "Кешью — это высококачественный натуральный продукт. Орехи обладают нежным вкусом и хрустящей текстурой. Упаковка Shumbola обеспечивает сохранность всех полезных свойств и удобство при употреблении.",
   },
 ];

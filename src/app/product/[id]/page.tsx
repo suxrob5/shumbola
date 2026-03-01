@@ -75,7 +75,7 @@ const ProductId = async (props: {
                 data-aos-delay="400"
               >
                 <p className="text-xl font-semibold text-gray-800 mb-4">
-                  O'lchamni tanlang (Sizes):
+                  Выберите размер (Sizes):
                 </p>
                 <div className="flex flex-wrap gap-4">
                   {product.sizes.map((s, i) => (
@@ -87,7 +87,7 @@ const ProductId = async (props: {
                             : "bg-gray-100 text-gray-700 hover:bg-blue-400 hover:text-white"
                           }`}
                       >
-                        {s} ml
+                        {s} мл
                       </button>
                     </Link>
                   ))}
@@ -96,13 +96,13 @@ const ProductId = async (props: {
 
               {/* Qo'shimcha ma'lumot uchun joy (masalan narx yoki buyurtma tugmasi) */}
               <div
-                className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100"
+                className="mt-12 p-6 bg-[#E8F1F9] rounded-2xl border border-blue-100"
                 data-aos="fade-up"
                 data-aos-duration="800"
                 data-aos-delay="600"
               >
                 <p className="text-blue-800 font-medium italic">
-                  * Mahsulotimiz tabiiy va sifatli xomashyodan tayyorlangan.
+                  * Наш продукт изготовлен из натурального и качественного сырья.
                 </p>
               </div>
             </div>

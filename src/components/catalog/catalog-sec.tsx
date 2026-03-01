@@ -8,9 +8,10 @@ const CatalogSec = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
       {catalogData ? (
         catalogData.map((item, index) => (
-          <div
+          <Link
             key={item.id}
-            className="group relative overflow-hidden rounded-3xl bg-[#E8F1F9] h-[300px] md:h-[400px] lg:h-[450px] cursor-pointer"
+            href={`/catalog/${item.link}`}
+            className="group relative overflow-hidden rounded-3xl bg-[#E8F1F9] h-[300px] md:h-[400px] lg:h-[450px] cursor-pointer block"
             data-aos="fade-up"
             data-aos-duration="700"
             data-aos-delay={index * 120}
@@ -32,7 +33,7 @@ const CatalogSec = () => {
                 {item.name}
               </h1>
 
-              <Link href={`/catalog/${item.link}`} className="self-start">
+              <div className="self-start">
                 <button className="flex items-center gap-2 bg-white hover:bg-gray-100 transition-colors rounded-xl px-6 py-3 font-bold text-black shadow-lg cursor-pointer">
                   Подробнее
                   <Image
@@ -42,9 +43,9 @@ const CatalogSec = () => {
                     height={18}
                   />
                 </button>
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <div className="col-span-full text-center py-20">

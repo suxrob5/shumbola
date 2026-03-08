@@ -106,7 +106,7 @@ const ProductId = (props: {
                             : "bg-gray-100 text-gray-700 hover:bg-blue-400 hover:text-white"
                           }`}
                       >
-                        {s} {t("product.ml")}
+                        {s} {t("product.g")}
                       </button>
                     </Link>
                   ))}

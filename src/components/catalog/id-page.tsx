@@ -9,7 +9,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 
 const IdPage = ({ item }: any) => {
   const pathname = usePathname();
-  const { language } = useTranslation();
+  const { t, language } = useTranslation();
 
   const getLocalizedName = (obj: any) => {
     if (language === "ru") return obj.name;
@@ -75,7 +75,7 @@ const IdPage = ({ item }: any) => {
                 {getLocalizedName(product)}
               </h1>
               <p className="italic text-[#484D53] text-sm mt-1">
-                {product.sizes.join(", ")} мл
+                {product.sizes.join(", ")} {t("product.g")}
               </p>
             </div>
           </Link>

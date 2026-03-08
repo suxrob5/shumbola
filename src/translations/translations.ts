@@ -65,7 +65,7 @@ export const translations = {
     },
     product: {
       chooseSize: "Выберите размер (Sizes):",
-      ml: "мл",
+      g: "g",
       naturalNotice:
         "* Наш продукт изготовлен из натурального и качественного сырья.",
     },
@@ -136,7 +136,7 @@ export const translations = {
     },
     product: {
       chooseSize: "O'lchamni tanlang:",
-      ml: "ml",
+      g: "g",
       naturalNotice:
         "* Mahsulotimiz tabiiy va sifatli xomashyodan tayyorlangan.",
     },
@@ -207,7 +207,7 @@ export const translations = {
     },
     product: {
       chooseSize: "Select Size:",
-      ml: "ml",
+      g: "g",
       naturalNotice:
         "* Our product is made from natural and high-quality raw materials.",
     },

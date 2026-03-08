@@ -83,11 +83,10 @@ export const ProductData: ProductType[] = [
     imageUrl: ToshQurt,
     sizes: [20],
     description:
-      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
-    description_uz: "Tarkibi: Sutli chakka, yodlangan tuz, bifidobakteriya. 0 dan +28 C gacha haroratda saqlansin. Saqlash muddati 6 oy. 100g uchun energetik qiymati: oqsillar-17g. Yog'lar-5g. Uglevodlar-1g. 120kkal",
-    description_en: "Ingredients: Milk chakka, iodized salt, bifidobacteria. Store from 0 to +28 C. Shelf life 6 months. Energy value per 100g: proteins-17g. Fats-5g. Carbohydrates-1g. 120kcal"
+      "Состав продукта: натуральная молочная чакка, изготовленная из отборного коровьего молока с добавлением полезных бифидобактерий и йодированной соли, без использования искусственных консервантов, красителей и ароматизаторов. Продукт обладает высокой пищевой ценностью и подходит для ежедневного употребления. Условия хранения: хранить при температуре от 0°C до +28°C в сухом месте, защищённом от прямых солнечных лучей; после вскрытия упаковки рекомендуется хранить в холодильнике. Срок хранения составляет 6 месяцев с даты изготовления при соблюдении условий хранения. Пищевая и энергетическая ценность на 100 г продукта: белки — 17 г, жиры — 5 г, углеводы — 1 г, энергетическая ценность — 120 ккал.",
+    description_uz: "Mahsulot tarkibi: tanlab olingan sigir sutidan tayyorlangan tabiiy sutli chakka, foydali bifidobakteriyalar va yodlangan tuz qo'shilgan, sun'iy konservantlar, bo'yoqlar va aromatizatorlarsiz. Mahsulot yuqori ozuqaviy qiymatga ega va kundalik iste'mol uchun mos keladi. Saqlash shartlari: quruq, to'g'ridan-to'g'ri quyosh nurlaridan himoyalangan joyda 0°C dan +28°C gacha haroratda saqlansin; paket ochilgandan so'ng muzlatgichda saqlash tavsiya etiladi. Saqlash muddati saqlash shartlariga rioya qilingan holda ishlab chiqarilgan sanadan boshlab 6 oy. 100 g mahsulot uchun ozuqaviy va energetik qiymati: oqsillar — 17 g, yog'lar — 5 g, uglevodlar — 1 g, energetik qiymati — 120 kkal.",
+    description_en: "Product ingredients: natural milk chakka made from selected cow's milk with the addition of beneficial bifidobacteria and iodized salt, without the use of artificial preservatives, colors or flavors. The product has high nutritional value and is suitable for daily consumption. Storage conditions: store at temperatures from 0°C to +28°C in a dry place protected from direct sunlight; after opening the package, it is recommended to store in the refrigerator. Shelf life is 6 months from the date of manufacture, subject to storage conditions. Nutritional and energy value per 100 g of product: proteins — 17 g, fats — 5 g, carbohydrates — 1 g, energy value — 120 kcal."
   },
-
   {
     id: 102,
     name: "Сулугуни (соленый)",
@@ -159,7 +158,6 @@ export const ProductData: ProductType[] = [
     description_uz: "Tarkibi: Keshyu, yodlangan tuz Saqlash muddati: 6 oy. +5 dan +22 gacha haroratda va havo namligi 75% dan oshmaydigan joyda saqlansin. Allergiyasi bor insonlar uchun tavsiya etilmaydi. 100g uchun energetik qiymati: oqsillar-18,5g. Yog'lar-48,5g. Uglevodlar-22,5g. 660kkal",
     description_en: "Ingredients: Cashew, iodized salt Shelf life: 6 months. Store at temperatures from +5 to +22C and relative humidity of no more than 75%. Not recommended for people with allergies. Energy value per 100g: proteins-18.5g. Fats-48.5g. Carbohydrates-12.5g. 660kcal"
   },
-
   {
     id: 107,
     name: "Арахис",
@@ -168,7 +166,7 @@ export const ProductData: ProductType[] = [
     imageUrl: YerYongoq,
     sizes: [20],
     description:
-      "Арахис — это питательный и вкусный продукт, приготовленный из отборного сырья. Продукт упакован в удобную упаковку Shumbola, которая сохраняет свежесть и аромат орехов. Идеально подходит для быстрого перекуса.",
+      "Арахис — это питательный и вкусный product, приготовленный из отборного сырья. Продукт упакован в удобную упаковку Shumbola, которая сохраняет свежесть и аромат орехов. Идеально подходит для быстрого перекуса.",
     description_uz: "Yer yong'og'i — bu saralangan xomashyodan tayyorlangan to'yimli va mazali mahsulot. Mahsulot yong'oqlarning yangiligi va hidini saqlaydigan qulay Shumbola qadog'iga qadoqlangan. Tezda tamaddi qilish uchun juda mos keladi.",
     description_en: "Peanuts are a nutritious and delicious product made from selected raw materials. The product is packed in convenient Shumbola packaging, which preserves the freshness and aroma of the nuts. Perfect for a quick snack."
   }, {

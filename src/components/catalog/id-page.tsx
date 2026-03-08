@@ -5,9 +5,18 @@ import { catalogData } from "../../backend/cat-data";
 import Image from "next/image";
 import { ProductType } from "@/types/types";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const IdPage = ({ item }: any) => {
   const pathname = usePathname();
+  const { language } = useTranslation();
+
+  const getLocalizedName = (obj: any) => {
+    if (language === "ru") return obj.name;
+    if (language === "uz") return obj.name_uz || obj.name;
+    if (language === "en") return obj.name_en || obj.name;
+    return obj.name;
+  };
 
   return (
     <div className="max-w-[1920px] mx-auto px-4 md:px-10 py-10">
@@ -15,7 +24,7 @@ const IdPage = ({ item }: any) => {
         className="text-3xl md:text-5xl font-extrabold text-center text-[#368BC6] mb-10 md:mb-14"
         data-aos="fade-down"
       >
-        {item.name}
+        {getLocalizedName(item)}
       </h1>
 
       <section className="max-w-[1200px] w-full lg:w-[85%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -36,7 +45,7 @@ const IdPage = ({ item }: any) => {
                 `}
               >
                 <h1 className="text-sm md:text-base font-semibold">
-                  {cat.name}
+                  {getLocalizedName(cat)}
                 </h1>
               </div>
             </Link>
@@ -56,14 +65,14 @@ const IdPage = ({ item }: any) => {
             <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl bg-white shadow-sm border border-[#368BC6]/10">
               <Image
                 src={product.imageUrl}
-                alt={product.name}
+                alt={getLocalizedName(product)}
                 fill
                 className="object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="mt-4 text-center">
               <h1 className="text-lg md:text-xl font-semibold text-gray-800">
-                {product.name}
+                {getLocalizedName(product)}
               </h1>
               <p className="italic text-[#484D53] text-sm mt-1">
                 {product.sizes.join(", ")} мл

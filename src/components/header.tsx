@@ -4,17 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 // Images
 import Telegram from "../assets/icons/tg-blue.png";
 import Instagram from "../assets/icons/insta.png";
-import Rusian from "../assets/icons/ru.png";
-// import Shumbola from "../assets/icons/shumbola_red.png";
+import Ru from "../assets/icons/ru.png";
+import En from "../assets/icons/en.png";
+import Uz from "../assets/icons/uz.png";
 import Shumbola from "../assets/icons/main.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
+
+  const getFlag = (lang: string) => {
+    if (lang === "ru") return <Image src={Ru} alt="ru" width={25} height={25} />;
+    if (lang === "uz") return <Image src={Uz} alt="uz" width={25} height={25} />;
+    if (lang === "en") return <Image src={En} alt="en" width={25} height={25} />;
+    return null;
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -23,7 +35,10 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  // ${scrolled ? "h-[60px] lg:h-[70px]" : "h-[80px] lg:h-[100px]"}
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value as any);
+  };
 
   return (
     <header
@@ -56,8 +71,8 @@ const Header: React.FC = () => {
           <ul
             className={`flex items-center justify-between gap-5 text-[#368BC6] ${scrolled ? "text-lg" : "text-[20px]"}`}
           >
-            <Link href="/about" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">О компании</Link>
-            <Link href="/catalog" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Каталог</Link>
+            <Link href="/about" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">{t("nav.about")}</Link>
+            <Link href="/catalog" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">{t("nav.catalog")}</Link>
 
             <div className="shrink-0 mx-4">
               <Link href="/" className="hover:scale-110 transition-transform duration-300 block">
@@ -71,10 +86,8 @@ const Header: React.FC = () => {
                 />
               </Link>
             </div>
-            <Link href="/discount" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Акции</Link>
-            {/* <Link href="/restesption">Рецепты</Link>
-            <Link href="/vacantion">Вакансии</Link> */}
-            <Link href="/contact" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">Контакты</Link>
+            <Link href="/discount" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">{t("nav.discount")}</Link>
+            <Link href="/contact" className="hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">{t("nav.contacts")}</Link>
           </ul>
         </div>
 
@@ -97,17 +110,15 @@ const Header: React.FC = () => {
           <div
             className={`${scrolled ? "text-lg" : "text-[20px]"} hidden sm:flex items-center gap-2`}
           >
-            <Image src={Rusian} alt="language" width={25} height={25} />
-            <select className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium">
-              <option value="ru" className="text-black">
-                Русский
-              </option>
-              <option value="en" className="text-black">
-                English
-              </option>
-              <option value="uz" className="text-black">
-                Uzbek
-              </option>
+            {getFlag(language)}
+            <select
+              value={language}
+              onChange={handleLanguageChange}
+              className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium"
+            >
+              <option value="ru" className="text-black">Русский</option>
+              <option value="en" className="text-black">English</option>
+              <option value="uz" className="text-black">Uzbek</option>
             </select>
           </div>
         </div>
@@ -119,48 +130,29 @@ const Header: React.FC = () => {
           } ${scrolled ? "top-[60px]" : "top-[80px]"}`}
       >
         <ul className="flex flex-col items-center gap-6 text-[#368BC6] text-lg font-semibold">
-          <Link href="/about" onClick={toggleMenu}>
-            О компании
-          </Link>
-          <Link href="/catalog" onClick={toggleMenu}>
-            Каталог
-          </Link>
-          <Link href="/discount" onClick={toggleMenu}>
-            Акции
-          </Link>
-          {/* <Link href="/restesption" onClick={toggleMenu}>
-            Рецепты
-          </Link>
-          <Link href="/vacantion" onClick={toggleMenu}>
-            Вакансии
-          </Link> */}
-          <Link href="/contact" onClick={toggleMenu}>
-            Контакты
-          </Link>
+          <Link href="/about" onClick={toggleMenu}>{t("nav.about")}</Link>
+          <Link href="/catalog" onClick={toggleMenu}>{t("nav.catalog")}</Link>
+          <Link href="/discount" onClick={toggleMenu}>{t("nav.discount")}</Link>
+          <Link href="/contact" onClick={toggleMenu}>{t("nav.contacts")}</Link>
 
           <div className="flex gap-6 mt-4">
-            <Link href="https://youtube.com/">
+            <Link href="https://t.me/shumbolauzz">
               <Image src={Telegram} alt="telegram" width={30} height={30} />
             </Link>
-            <Link href="#">
+            <Link href="https://www.instagram.com/shumbola.uz/">
               <Image src={Instagram} alt="Instagram" width={30} height={30} />
             </Link>
-
           </div>
-          <div
-            className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}
-          >
-            <Image src={Rusian} alt="language" width={25} height={25} />
-            <select className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium">
-              <option value="ru" className="text-black">
-                Русский
-              </option>
-              <option value="en" className="text-black">
-                English
-              </option>
-              <option value="uz" className="text-black">
-                Uzbek
-              </option>
+          <div className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}>
+            {getFlag(language)}
+            <select
+              value={language}
+              onChange={handleLanguageChange}
+              className="Languages bg-transparent border-none outline-none text-[#368BC6] option:text-black cursor-pointer font-medium"
+            >
+              <option value="ru" className="text-black">Русский</option>
+              <option value="en" className="text-black">English</option>
+              <option value="uz" className="text-black">Uzbek</option>
             </select>
           </div>
         </ul>

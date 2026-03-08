@@ -1,18 +1,23 @@
+"use client";
+
 import NotFound from "@/app/not-found";
 import { ProductData } from "@/backend/products-data";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/hooks/useTranslation";
+import { use } from "react";
 
-const ProductId = async (props: {
+const ProductId = (props: {
   params: Promise<{ id: string }>;
   searchParams: Promise<{ size?: string }>;
 }) => {
-  const params = await props.params;
-  const searchParams = await props.searchParams;
+  const params = use(props.params);
+  const searchParams = use(props.searchParams);
   const { id } = params;
   const { size } = searchParams;
+  const { t, language } = useTranslation();
 
   const product = ProductData.find((product) => product.id === Number(id));
 
@@ -21,6 +26,20 @@ const ProductId = async (props: {
   }
 
   const currentSize = size ? Number(size) : product.sizes[0];
+
+  const getLocalizedName = (obj: any) => {
+    if (language === "ru") return obj.name;
+    if (language === "uz") return obj.name_uz || obj.name;
+    if (language === "en") return obj.name_en || obj.name;
+    return obj.name;
+  };
+
+  const getLocalizedDesc = (obj: any) => {
+    if (language === "ru") return obj.description;
+    if (language === "uz") return obj.description_uz || obj.description;
+    if (language === "en") return obj.description_en || obj.description;
+    return obj.description;
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -41,7 +60,7 @@ const ProductId = async (props: {
               <div className="relative w-full max-w-[500px] aspect-square">
                 <Image
                   src={product.imageUrl}
-                  alt={product.name}
+                  alt={getLocalizedName(product)}
                   fill
                   priority
                   className="rounded-3xl object-contain md:object-cover shadow-2xl"
@@ -56,7 +75,7 @@ const ProductId = async (props: {
                 data-aos="fade-left"
                 data-aos-duration="800"
               >
-                {product.name}
+                {getLocalizedName(product)}
               </h1>
 
               <p
@@ -65,7 +84,7 @@ const ProductId = async (props: {
                 data-aos-duration="800"
                 data-aos-delay="200"
               >
-                {product.description}
+                {getLocalizedDesc(product)}
               </p>
 
               <div
@@ -75,7 +94,7 @@ const ProductId = async (props: {
                 data-aos-delay="400"
               >
                 <p className="text-xl font-semibold text-gray-800 mb-4">
-                  Выберите размер (Sizes):
+                  {t("product.chooseSize")}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   {product.sizes.map((s, i) => (
@@ -87,7 +106,7 @@ const ProductId = async (props: {
                             : "bg-gray-100 text-gray-700 hover:bg-blue-400 hover:text-white"
                           }`}
                       >
-                        {s} мл
+                        {s} {t("product.ml")}
                       </button>
                     </Link>
                   ))}
@@ -102,7 +121,7 @@ const ProductId = async (props: {
                 data-aos-delay="600"
               >
                 <p className="text-blue-800 font-medium italic">
-                  * Наш продукт изготовлен из натурального и качественного сырья.
+                  {t("product.naturalNotice")}
                 </p>
               </div>
             </div>

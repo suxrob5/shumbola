@@ -1,11 +1,16 @@
+"use client";
+
 import Baner from "@/assets/images/about/history-baner.png";
 import Workers from "@/assets/images/about/workers.png";
 import Creator from "@/assets/images/about/creator.png";
 import AboutProduct from "@/assets/images/about/product-ab.png";
 import AboutProduct2 from "@/assets/images/about/product-ab2.png";
 import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const History = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* 1. История компании - Banner Section */}
@@ -25,35 +30,21 @@ const History = () => {
             />
           </div>
           <div className="w-full md:w-[45%] md:text-inherit" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-            <h1 className="text-3xl md:text-4xl font-bold">История компании</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">{t("aboutPage.historyTitle")}</h1>
             <p className="mt-3 text-sm md:text-base text-[#484D53] leading-relaxed">
-              В 2022 году под брендом Shumbola впервые в Узбекистане
-
-              организовали фабричную переработку, производство и реализацию
-
-              продукции из семян подсолнечника. С 2024 года ERMAK — первый и
-
-              единственный в Узбекистане производитель курта в фабричных
-
-              условиях. Мы постоянно расширяем линейку продукции. Под единым
-
-              брендом ERMAK сегодня выпускаются семечки, курт, сухофрукты и
-
-              сушки. Со дня основания девизом компании стал слоган: «Полезно,
-
-              вкусно, чисто». Этим главным критериям соответствует каждый
-
-              продукт торговой марки ERMAK.
+              {t("aboutPage.historyText")}
             </p>
           </div>
         </div>
       </div>
 
-    
+
 
       {/* 3. Foto about - Fotootchet */}
       <div className="mt-20 md:mt-30 w-[90%] md:w-[80%] max-w-[1920px] mx-auto pb-20">
-        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left" data-aos="zoom-in" data-aos-duration="700">Фотоотчет</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left" data-aos="zoom-in" data-aos-duration="700">
+          {t("aboutPage.photoReport")}
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           <Image
             src={AboutProduct}

@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import AOSProvider from "@/components/aos-provider";
+import AosProvider from "@/components/aos-provider";
 import { Analytics } from "@vercel/analytics/react"
-
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Shumbola",
+  description: "Natural products",
 };
 
 export default function RootLayout({
@@ -20,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <body className={inter.className}>
-        <AOSProvider />
-        {children}
+    <html lang="en">
+      <body className={`antialiased`}>
+        <LanguageProvider>
+          <AosProvider />
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

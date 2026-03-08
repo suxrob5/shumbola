@@ -66,81 +66,121 @@ export const ProductData: ProductType[] = [
   {
     id: 100,
     name: "Курт",
+    name_uz: "Qurt",
+    name_en: "Qurt",
     imageUrl: Qurt,
     sizes: [20, 30, 50],
     description:
-      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал"
+      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
+    description_uz: "Tarkibi: Sutli chakka, yodlangan tuz, bifidobakteriya. 0 dan +28 C gacha haroratda saqlansin. Saqlash muddati 6 oy. 100g uchun energetik qiymati: oqsillar-17g. Yog'lar-5g. Uglevodlar-1g. 120kkal",
+    description_en: "Ingredients: Milk chakka, iodized salt, bifidobacteria. Store from 0 to +28 C. Shelf life 6 months. Energy value per 100g: proteins-17g. Fats-5g. Carbohydrates-1g. 120kcal"
   },
   {
     id: 101,
     name: "Твердый курт",
+    name_uz: "Tosh qurt",
+    name_en: "Hard Qurt",
     imageUrl: ToshQurt,
     sizes: [20, 30, 50],
     description:
-      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал"
+      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
+    description_uz: "Tarkibi: Sutli chakka, yodlangan tuz, bifidobakteriya. 0 dan +28 C gacha haroratda saqlansin. Saqlash muddati 6 oy. 100g uchun energetik qiymati: oqsillar-17g. Yog'lar-5g. Uglevodlar-1g. 120kkal",
+    description_en: "Ingredients: Milk chakka, iodized salt, bifidobacteria. Store from 0 to +28 C. Shelf life 6 months. Energy value per 100g: proteins-17g. Fats-5g. Carbohydrates-1g. 120kcal"
   },
 
   {
     id: 102,
     name: "Сулугуни",
+    name_uz: "Suluguni",
+    name_en: "Suluguni",
     imageUrl: Sluguni,
     sizes: [20, 30, 50],
     description:
-      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал"
+      "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
+    description_uz: "Tarkibi: Sutli chakka, yodlangan tuz, bifidobakteriya. 0 dan +28 C gacha haroratda saqlansin. Saqlash muddati 6 oy. 100g uchun energetik qiymati: oqsillar-17g. Yog'lar-5g. Uglevodlar-1g. 120kkal",
+    description_en: "Ingredients: Milk chakka, iodized salt, bifidobacteria. Store from 0 to +28 C. Shelf life 6 months. Energy value per 100g: proteins-17g. Fats-5g. Carbohydrates-1g. 120kcal"
   },
   {
     id: 103,
     name: "Хандом фисташки",
+    name_uz: "Xandom pista",
+    name_en: "Xandom pistachios",
     imageUrl: XandomPista,
     sizes: [20, 30, 50],
     description:
       "Фисташки — это натуральный и полезный продукт. Они тщательно отобраны и упакованы в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный с логотипом Shumbola. Фисташки являются питательным и вкусным перекусом, который отлично подходит для употребления в дороге или дома.",
+    description_uz: "Pista — bu tabiiy va foydali mahsulot. Ular sinchkovlik bilan saralangan va maxsus shaffof qadoqlarga qadoqlangan. Qadoqlash dizayni Shumbola logotipi bilan oddiy va ravon. Pista — bu yo'lda yoki uyda iste'mol qilish uchun juda mos keladigan to'yimli va mazali tamaddi.",
+    description_en: "Pistachios are a natural and healthy product. They are carefully selected and packed in special transparent packaging. The packaging design is simple and neat with the Shumbola logo. Pistachios are a nutritious and delicious snack that is great for consuming on the go or at home."
   },
   {
     id: 104,
     name: "Хандом фисташки",
+    name_uz: "Xandom pista",
+    name_en: "Xandom pistachios",
     imageUrl: XandomPista2,
     sizes: [20, 30, 50],
     description:
-      "Состав: Ядра фисташки, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-21г. Жиры-51г. Углеводы-16г. 610ккал"
+      "Состав: Ядра фисташки, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-21г. Жиры-51г. Углеводы-16г. 610ккал",
+    description_uz: "Tarkibi: Pista mag'zi, yodlangan tuz Saqlash muddati: 6 oy. +5 dan +22 gacha haroratda va havo namligi 75% dan oshmaydigan joyda saqlansin. Allergiyasi bor insonlar uchun tavsiya etilmaydi. 100g uchun energetik qiymati: oqsillar-21g. Yog'lar-51g. Uglevodlar-16g. 610kkal",
+    description_en: "Ingredients: Pistachio kernels, iodized salt Shelf life: 6 months. Store at temperatures from +5 to +22C and relative humidity of no more than 75%. Not recommended for people with allergies. Energy value per 100g: proteins-21g. Fats-51g. Carbohydrates-16g. 610kcal"
   },
   {
     id: 105,
     name: "Миндаль",
+    name_uz: "Bodom",
+    name_en: "Almonds",
     imageUrl: Bodom,
     sizes: [20, 30, 50],
     description:
-      "Состав: Ядра миндаля, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал"
+      "Состав: Ядра миндаля, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал",
+    description_uz: "Tarkibi: Bodom mag'zi, yodlangan tuz Saqlash muddati: 6 oy. +5 dan +22 gacha haroratda va havo namligi 75% dan oshmaydigan joyda saqlansin. Allergiyasi bor insonlar uchun tavsiya etilmaydi. 100g uchun energetik qiymati: oqsillar-22,4g. Yog'lar-55,9g. Uglevodlar-12,3g. 642kkal",
+    description_en: "Ingredients: Almond kernels, iodized salt Shelf life: 6 months. Store at temperatures from +5 to +22C and relative humidity of no more than 75%. Not recommended for people with allergies. Energy value per 100g: proteins-22.4g. Fats-55.9g. Carbohydrates-12.3g. 642kcal"
   }, {
     id: 106,
     name: "Кешью",
+    name_uz: "Keshyu",
+    name_en: "Cashew",
     imageUrl: Keshu,
     sizes: [20, 30, 50],
     description:
-      "Состав: Kешью, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-18,5г. Жиры-48,5г. Углеводы-22,5г. 660ккал"
+      "Состав: Kешью, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-18,5г. Жиры-48,5г. Углеводы-22,5г. 660ккал",
+    description_uz: "Tarkibi: Keshyu, yodlangan tuz Saqlash muddati: 6 oy. +5 dan +22 gacha haroratda va havo namligi 75% dan oshmaydigan joyda saqlansin. Allergiyasi bor insonlar uchun tavsiya etilmaydi. 100g uchun energetik qiymati: oqsillar-18,5g. Yog'lar-48,5g. Uglevodlar-22,5g. 660kkal",
+    description_en: "Ingredients: Cashew, iodized salt Shelf life: 6 months. Store at temperatures from +5 to +22C and relative humidity of no more than 75%. Not recommended for people with allergies. Energy value per 100g: proteins-18.5g. Fats-48.5g. Carbohydrates-12.5g. 660kcal"
   },
 
   {
     id: 107,
     name: "Арахис",
+    name_uz: "Yer yong'og'i",
+    name_en: "Peanuts",
     imageUrl: YerYongoq,
     sizes: [20, 30, 50],
     description:
       "Арахис — это питательный и вкусный продукт, приготовленный из отборного сырья. Продукт упакован в удобную упаковку Shumbola, которая сохраняет свежесть и аромат орехов. Идеально подходит для быстрого перекуса.",
+    description_uz: "Yer yong'og'i — bu saralangan xomashyodan tayyorlangan to'yimli va mazali mahsulot. Mahsulot yong'oqlarning yangiligi va hidini saqlaydigan qulay Shumbola qadog'iga qadoqlangan. Tezda tamaddi qilish uchun juda mos keladi.",
+    description_en: "Peanuts are a nutritious and delicious product made from selected raw materials. The product is packed in convenient Shumbola packaging, which preserves the freshness and aroma of the nuts. Perfect for a quick snack."
   }, {
     id: 108,
     name: "Абрикосовые косточки",
+    name_uz: "O'rik danagi",
+    name_en: "Apricot kernels",
     imageUrl: OrikDanak,
     sizes: [20, 30, 50],
     description:
-      "Состав: Ядра абрикоса, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал"
+      "Состав: Ядра абрикоса, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал",
+    description_uz: "Tarkibi: O'rik mag'zi, yodlangan tuz Saqlash muddati: 6 oy. +5 dan +22 gacha haroratda va havo namligi 75% dan oshmaydigan joyda saqlansin. Allergiyasi bor insonlar uchun tavsiya etilmaydi. 100g uchun energetik qiymati: oqsillar-22,4g. Yog'lar-55,9g. Uglevodlar-12,3g. 642kkal",
+    description_en: "Ingredients: Apricot kernels, iodized salt Shelf life: 6 months. Store at temperatures from +5 to +22C and relative humidity of no more than 75%. Not recommended for people with allergies. Energy value per 100g: proteins-22.4g. Fats-55.9g. Carbohydrates-12.3g. 642kcal"
   },
   {
     id: 109,
     name: "Фисташки",
+    name_uz: "Pista",
+    name_en: "Pistachios",
     imageUrl: Pista,
     sizes: [20, 30, 50],
     description:
       "Фисташки — это натуральный и полезный продукт. Они тщательно отобраны и упакованы в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный с логотипoм Shumbola. Фисташки являются питательным и вкусным перекусом, который отлично подходит для употребления в дороге или дома.",
+    description_uz: "Pista — bu tabiiy va foydali mahsulot. Ular sinchkovlik bilan saralangan va maxsus shaffof qadoqlarga qadoqlangan. Qadoqlash dizayni Shumbola logotipi bilan oddiy va ravon. Pista — bu yo'lda yoki uyda iste'mol qilish uchun juda mos keladigan to'yimli va mazali tamaddi.",
+    description_en: "Pistachios are a natural and healthy product. They are carefully selected and packed in special transparent packaging. The packaging design is simple and neat with the Shumbola logo. Pistachios are a nutritious and delicious snack that is great for consuming on the go or at home."
   },
 ];

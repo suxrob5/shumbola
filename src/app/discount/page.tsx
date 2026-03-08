@@ -1,8 +1,14 @@
+"use client";
+
 import Header from "@/components/header";
 import Begin from "@/components/name";
 import MainImg from "@/assets/images/discount.png";
 import Footer from "@/components/footer";
+import { useTranslation } from "@/hooks/useTranslation";
+
 const Discount = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <header>
@@ -14,7 +20,7 @@ const Discount = () => {
             data-aos="zoom-in"
             data-aos-duration="800"
           >
-            На данный момент акций нет
+            {t("discount.noDiscounts")}
           </h1>
         </main>
         <footer className="mt-[300px]">

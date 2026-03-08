@@ -1,3 +1,4 @@
+"use client";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -8,8 +9,11 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { PhoneCall } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <header>
@@ -20,50 +24,50 @@ const Contact = () => {
         {/* Contact input */}
         <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-10 w-full lg:w-[64%]" data-aos="zoom-in">
           <h1 className="text-2xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="150">
-            Оставьте заявку, мы с вами свяжемся
+            {t("contact.formTitle")}
           </h1>
           <div className="flex items-center justify-between">
             {/* Input form */}
             <form className=" flex flex-col gap-4 w-full">
               <div data-aos="zoom-in" data-aos-delay="200" className="w-full">
-                <FieldLabel htmlFor="fish" className="text-base">ФИО:</FieldLabel>
+                <FieldLabel htmlFor="fish" className="text-base">{t("contact.fio")}</FieldLabel>
                 <Input
                   id="fish"
                   type="text"
-                  placeholder="Введите..."
+                  placeholder={t("contact.placeholder")}
                   className="md:text-[16px] h-[50px] text-base bg-white border-none mt-1 w-full"
                 />
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4" data-aos="zoom-in" data-aos-delay="250">
                 <div className="w-full">
-                  <FieldLabel htmlFor="phone" className="text-base">Телефон:</FieldLabel>
+                  <FieldLabel htmlFor="phone" className="text-base">{t("contact.phone")}</FieldLabel>
                   <Input
                     id="phone"
                     type="number"
-                    placeholder="Введите..."
+                    placeholder={t("contact.placeholder")}
                     className="md:text-[16px] h-[50px] text-base bg-white border-none mt-3 w-full"
                   />
                 </div>
                 <div className="w-full">
-                  <FieldLabel htmlFor="email" className="text-base">Почта:</FieldLabel>
+                  <FieldLabel htmlFor="email" className="text-base">{t("contact.email")}</FieldLabel>
                   <Input
                     id="email"
                     type="text"
-                    placeholder="Введите..."
+                    placeholder={t("contact.placeholder")}
                     className="md:text-[16px] h-[50px] text-base bg-white border-none mt-2 w-full"
                   />
                 </div>
               </div>
               <div className="w-full" data-aos="zoom-in" data-aos-delay="300">
-                <FieldLabel htmlFor="comment" className="text-base">Сообщение:</FieldLabel>
-                <Textarea id="comment" name="comment" placeholder="Введите..." className="md:text-[16px] h-[100px] text-base bg-white border-none mt-2 w-full" />
+                <FieldLabel htmlFor="comment" className="text-base">{t("contact.message")}</FieldLabel>
+                <Textarea id="comment" name="comment" placeholder={t("contact.placeholder")} className="md:text-[16px] h-[100px] text-base bg-white border-none mt-2 w-full" />
               </div>
               <div data-aos="zoom-in" data-aos-delay="300">
                 <button
                   type="submit"
                   className="mt-2 bg-[#3291D3] hover:bg-[#2578b5] transition-colors text-white font-semibold px-8 py-3 rounded-xl cursor-pointer"
                 >
-                  Отправить
+                  {t("contact.send")}
                 </button>
               </div>
             </form>
@@ -75,7 +79,7 @@ const Contact = () => {
           <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in">
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
-              <h1 className="text-[#393F48] text-[18px]">Телефон:</h1>
+              <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
             </div>
             <div className="grid grid-cols-1">
               <Link href="tel:+998339222122" className="font-bold text-xl">+998 33 922 21 22</Link>
@@ -85,7 +89,7 @@ const Contact = () => {
           <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
-              <h1 className="text-[#393F48] text-[18px]">Телефон:</h1>
+              <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
             </div>
             <div className="grid grid-cols-1">
               <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
@@ -95,7 +99,7 @@ const Contact = () => {
           <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="250">
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
-              <h1 className="text-[#393F48] text-[18px]">Телефон:</h1>
+              <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
             </div>
             <div className="grid grid-cols-1">
               <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
@@ -105,7 +109,7 @@ const Contact = () => {
           <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
-              <h1 className="text-[#393F48] text-[18px]">Телефон:</h1>
+              <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
             </div>
             <div className="grid grid-cols-1">
               <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>

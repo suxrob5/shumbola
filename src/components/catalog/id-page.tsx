@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ProductType } from "@/types/types";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ProductData } from "@/backend/products-data";
 
 const IdPage = ({ item }: any) => {
   const pathname = usePathname();
@@ -17,6 +18,17 @@ const IdPage = ({ item }: any) => {
     if (language === "en") return obj.name_en || obj.name;
     return obj.name;
   };
+
+  const catFilterData = ProductData.filter((proItem) => {
+    if (proItem.type == item.catType) {
+      return item
+    }
+
+  });
+
+
+  console.log(catFilterData);
+
 
   return (
     <div className="max-w-[1920px] mx-auto px-4 md:px-10 py-10">
@@ -54,7 +66,7 @@ const IdPage = ({ item }: any) => {
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-[1200px] w-full lg:w-[85%] mx-auto mt-16 md:mt-20">
-        {item.products.map((product: ProductType, index: number) => (
+        {catFilterData.map((product: ProductType, index: number) => (
           <Link
             href={`/product/${product.id}`}
             key={product.id}

@@ -5,14 +5,27 @@ import Link from "next/link";
 import RightIcon from "@/assets/icons/right.png";
 import { catalogData } from "@/backend/cat-data";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ProductData } from "@/backend/products-data";
 
 const CatalogSec = () => {
   const { t, language } = useTranslation();
 
+  const catData = catalogData.map(item => {
+    const findData = ProductData.find(item => item.type === item.catType)
+    return {
+      ...item,
+      products: findData
+    }
+  })
+
+  // const findData = ProductData.find(item => item.type === )
+
+  console.log(catData);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
-      {catalogData ? (
-        catalogData.map((item, index) => {
+      {catData ? (
+        catData.map((item, index) => {
           const localizedName = language === "ru" ? item.name : language === "uz" ? item.name_uz : item.name_en;
 
           return (

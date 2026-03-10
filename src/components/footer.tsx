@@ -4,6 +4,7 @@ import MainImg from "@/assets/images/footerImg.png";
 import Telegram from "@/assets/icons/tg-blue.png";
 import Facebook from "@/assets/icons/facebook-blue.png";
 import Instagram from "@/assets/icons/insta-blue.svg";
+import Youtube from "@/assets/icons/youtube-blue.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -27,6 +28,7 @@ const Footer = () => {
     { name: "tg", icon: Telegram, href: "https://t.me/shumbolauzz" },
     { name: "fb", icon: Facebook, href: "https://www.facebook.com/shumbola.uz/" },
     { name: "insta", icon: Instagram, href: "https://www.instagram.com/shumbola.uz/" },
+    { name: "youtube", icon: Youtube, href: "https://www.youtube.com/@Shumbola.1991" },
   ];
 
   const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -81,7 +83,7 @@ const Footer = () => {
           </div>
 
           <div data-aos="fade-up" data-aos-delay="400">
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">{t("footer.contacts")}</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4">{t("footer.socials")}</h3>
             <div className="flex flex-col gap-3 items-center sm:items-start">
               <ContactButton text={t("footer.address")} isLink={false} />
               <div className="flex gap-3 justify-center sm:justify-start">

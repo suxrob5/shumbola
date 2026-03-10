@@ -10,6 +10,12 @@ type Props = {
   }>;
 };
 
+export async function generateStaticParams() {
+  return catalogData.map((item) => ({
+    id: item.link,
+  }));
+}
+
 export default async function CatalogID({ params }: Props) {
   const { id } = await params;
 

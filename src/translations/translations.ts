@@ -17,6 +17,7 @@ export const translations = {
       section: "Раздел",
       contacts: "Контакты",
       address: "Ташкент, ул. Кушкурган",
+      socials: "Соц. сети",
       copyright: "Copyright © 2026, Shumbola production",
     },
     inform: {
@@ -88,6 +89,7 @@ export const translations = {
       section: "Bo'lim",
       contacts: "Kontaktlar",
       address: "Toshkent, Kushqo'rg'on ko'chasi",
+      socials: "Ijtimoiy tarmoqlar",
       copyright: "Mualliflik huquqi © 2026, Shumbola production",
     },
     inform: {
@@ -159,6 +161,7 @@ export const translations = {
       section: "Section",
       contacts: "Contacts",
       address: "Tashkent, Kushkurgan Str.",
+      socials: "Socials",
       copyright: "Copyright © 2026, Shumbola production",
     },
     inform: {

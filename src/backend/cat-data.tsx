@@ -32,8 +32,6 @@ import { CtType } from "@/types/types";
 // O'rik Danak          7
 // Semechka             8
 
-
-
 export const catalogData: CtType = [
   { //qurt 
     id: 1,
@@ -118,3 +116,5 @@ export const catalogData: CtType = [
     img: Pista,
   },
 ];
+
+

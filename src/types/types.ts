@@ -14,7 +14,6 @@ export interface ItemType {
 }
 
 export type ProductType = {
-  catType: number;
   id: number;
   name: string;
   name_uz?: string;

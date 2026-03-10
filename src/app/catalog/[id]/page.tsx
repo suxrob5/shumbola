@@ -13,15 +13,10 @@ type Props = {
 export default async function CatalogID({ params }: Props) {
   const { id } = await params;
 
-  const filterData = catalogData.filter((link) => link.link === id);
-
-  if (filterData.length === 0) {
+  const item = catalogData.find((item) => item.link === id);
+  if (!item) {
     return <NotFound />;
   }
-
-  const item = catalogData.find((item) => item.link === id);
-
-  console.log(item);
 
   return (
     <div>

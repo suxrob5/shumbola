@@ -19,15 +19,7 @@ const IdPage = ({ item }: any) => {
     return obj.name;
   };
 
-  const catFilterData = ProductData.filter((proItem) => {
-    if (proItem.type == item.catType) {
-      return item
-    }
-
-  });
-
-
-  console.log(catFilterData);
+  const catFilterData = ProductData.filter((proItem) => proItem.type === item.catType);
 
 
   return (

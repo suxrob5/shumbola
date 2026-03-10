@@ -8,21 +8,11 @@ import Keshu from "@/assets/images/products/keshu.png";
 import Sluguni from "@/assets/images/products/sluguni.png";
 import XandomPista from "@/assets/images/products/xandom-pista.png";
 import XandomPista2 from "@/assets/images/products/xandom-pista2.png";
+import PistaTuzsiz from "@/assets/images/products/pista-tuzsiz.png";
+import PistaTuzli from "@/assets/images/products/pista-tuzli.png";
 import { ProductType } from "@/types/types";
 
 
-import QurtP from "@/assets/images/products/qurt.png";
-import ToshQurtP from "@/assets/images/products/tosh-qurt.png";
-import BodomP from "@/assets/images/products/bodom.png";
-import OrikDanakP from "@/assets/images/products/orik-danak.png";
-import YerYongoqP from "@/assets/images/products/yer-yongogi.png";
-import KeshuP from "@/assets/images/products/keshu.png";
-import SluguniP from "@/assets/images/products/sluguni.png";
-import Pista from "@/assets/images/products/pista.png";
-import PistaTuzsizP from "@/assets/images/products/pista-tuzsiz.png";
-import PistaTuzliP from "@/assets/images/products/pista-tuzli.png";
-import XandomPistaP from "@/assets/images/products/xandom-pista.png";
-import XandomPista2P from "@/assets/images/products/xandom-pista2.png";
 
 
 // Catalog type
@@ -43,7 +33,7 @@ export const ProductData: ProductType[] = [
     name: "Курт",
     name_uz: "Qurt",
     name_en: "Qurt",
-    imageUrl: QurtP,
+    imageUrl: Qurt,
     sizes: [20],
     description:
       "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
@@ -56,7 +46,7 @@ export const ProductData: ProductType[] = [
     name: "Твердый курт",
     name_uz: "Tosh qurt",
     name_en: "Hard Qurt",
-    imageUrl: ToshQurtP,
+    imageUrl: ToshQurt,
     sizes: [20],
     description:
       "Состав продукта: натуральная молочная чакка, изготовленная из отборного коровьего молока с добавлением полезных бифидобактерий и йодированной соли, без использования искусственных консервантов, красителей и ароматизаторов. Продукт обладает высокой пищевой ценностью и подходит для ежедневного употребления. Условия хранения: хранить при температуре от 0°C до +28°C в сухом месте, защищённом от прямых солнечных лучей; после вскрытия упаковки рекомендуется хранить в холодильнике. Срок хранения составляет 6 месяцев с даты изготовления при соблюдении условий хранения. Пищевая и энергетическая ценность на 100 г продукта: белки — 17 г, жиры — 5 г, углеводы — 1 г, энергетическая ценность — 120 ккал.",
@@ -69,7 +59,7 @@ export const ProductData: ProductType[] = [
     name: "Сулугуни (соленый)",
     name_uz: "Suluguni (tuzli)",
     name_en: "Suluguni (salted)",
-    imageUrl: SluguniP,
+    imageUrl: Sluguni,
     sizes: [20],
     description:
       "Состав: Чакка молочная, соль йодированная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
@@ -82,7 +72,7 @@ export const ProductData: ProductType[] = [
     name: "Сулугуни (без соли)",
     name_uz: "Suluguni (tuzsiz)",
     name_en: "Suluguni (unsalted)",
-    imageUrl: SluguniP,
+    imageUrl: Sluguni,
     sizes: [20],
     description:
       "Состав: Чакка молочная, бифидобактерия. Хранить от 0 Сдо +28 С. Срок хранения 6 месяц. Энергетическая ценность на 100г: белки-17г. Жиры-5г. Углеводы-1г. 120ккал",
@@ -95,7 +85,7 @@ export const ProductData: ProductType[] = [
     name: "Хандом фисташки",
     name_uz: "Xandom pista",
     name_en: "Xandom pistachios",
-    imageUrl: XandomPistaP,
+    imageUrl: XandomPista,
     sizes: [20],
     description:
       "Фисташки — это натуральный и полезный продукт. Они тщательно отобраны и упакованы в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный с логотипом Shumbola. Фисташки являются питательным и вкусным перекусом, который отлично подходит для употребления в дороге или дома.",
@@ -108,7 +98,7 @@ export const ProductData: ProductType[] = [
     name: "Хандом фисташки",
     name_uz: "Xandom pista",
     name_en: "Xandom pistachios",
-    imageUrl: XandomPista2P,
+    imageUrl: XandomPista2,
     sizes: [20],
     description:
       "Состав: Ядра фисташки, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-21г. Жиры-51г. Углеводы-16г. 610ккал",
@@ -121,7 +111,7 @@ export const ProductData: ProductType[] = [
     name: "Миндаль",
     name_uz: "Bodom",
     name_en: "Almonds",
-    imageUrl: BodomP,
+    imageUrl: Bodom,
     sizes: [20],
     description:
       "Состав: Ядра миндаля, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал",
@@ -134,7 +124,7 @@ export const ProductData: ProductType[] = [
     name: "Кешью",
     name_uz: "Keshyu",
     name_en: "Cashew",
-    imageUrl: KeshuP,
+    imageUrl: Keshu,
     sizes: [20],
     description:
       "Состав: Kешью, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-18,5г. Жиры-48,5г. Углеводы-22,5г. 660ккал",
@@ -147,7 +137,7 @@ export const ProductData: ProductType[] = [
     name: "Арахис",
     name_uz: "Yer yong'og'i",
     name_en: "Peanuts",
-    imageUrl: YerYongoqP,
+    imageUrl: YerYongoq,
     sizes: [20],
     description:
       "Арахис — это питательный и вкусный продукт, приготовленный из отборного сырья. Продукт упакован в удобную упаковку Shumbola, которая сохраняет свежесть и аромат орехов. Идеально подходит для быстрого перекуса.",
@@ -161,7 +151,7 @@ export const ProductData: ProductType[] = [
     name: "Абрикосовые косточки",
     name_uz: "O'rik danagi",
     name_en: "Apricot kernels",
-    imageUrl: OrikDanakP,
+    imageUrl: OrikDanak,
     sizes: [20],
     description:
       "Состав: Ядра абрикоса, соль йодированная Срок годности: 6 месяцев. Хранить при температуре от +5 до +22С и относительной влажности воздуха не более 75%. Не рекомендуется людям с аллергии. Энергетическая ценность на 100г: белки-22,4г. Жиры-55,9г. Углеводы-12,3г. 642ккал",
@@ -175,7 +165,7 @@ export const ProductData: ProductType[] = [
     name: "СЕМЕЧКИ",
     name_uz: "Semechka",
     name_en: "Sunflower seeds",
-    imageUrl: PistaTuzsizP,
+    imageUrl: PistaTuzsiz,
     sizes: [100, 200],
     description:
       "Семечки — это натуральный и полезный продукт. Они тщательно отобраны и упакованы в специальные прозрачные упаковки. Дизайн упаковки простой и аккуратный с логотипoм Shumbola. Семечки являются питательным и вкусным перекусом, который отлично подходит для употребления в дороге или дома.",
@@ -188,7 +178,7 @@ export const ProductData: ProductType[] = [
     name: "СЕМЕЧКИ СОЛЕННЫЕ",
     name_uz: "Tuzlangan semechka",
     name_en: "Salted sunflower seeds",
-    imageUrl: PistaTuzliP,
+    imageUrl: PistaTuzli,
     sizes: [100, 200],
     description:
       "Состав: Семена подсолнуха жаренные, соль йодированная Срок годности: 6 месяцев. Беречь от прямых солнечных лучей. Хранить при температуре от +5°C до +25°C и относительной влажности воздуха не более 75%. Пищевая ценность на 100г: белки-20,7г. Жиры-45г. Углеводы-2,7г. Энергетическая ценность - 515 ккал. Дата изготовления указана на упаковке.",

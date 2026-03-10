@@ -10,10 +10,10 @@ import { ProductData } from "@/backend/products-data";
 const CatalogSec = () => {
   const { t, language } = useTranslation();
 
-  const catData = catalogData.map(item => {
-    const findData = ProductData.find(item => item.type === item.catType)
+  const catData = catalogData.map(cat => {
+    const findData = ProductData.find(p => p.type === cat.catType)
     return {
-      ...item,
+      ...cat,
       products: findData
     }
   })

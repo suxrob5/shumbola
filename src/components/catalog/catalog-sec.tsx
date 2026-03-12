@@ -18,10 +18,6 @@ const CatalogSec = () => {
     }
   })
 
-  // const findData = ProductData.find(item => item.type === )
-
-  console.log(catData);
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
       {catData ? (

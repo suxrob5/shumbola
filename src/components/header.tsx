@@ -10,7 +10,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 // Images
 import Telegram from "../assets/icons/tg-blue.png";
 import Instagram from "../assets/icons/insta.png";
-import Youtube from "../assets/icons/youtube-blue.svg";
+
 import Ru from "../assets/icons/ru.png";
 import En from "../assets/icons/en.png";
 import Uz from "../assets/icons/uz.png";
@@ -58,9 +58,7 @@ const Header: React.FC = () => {
           <Link href="https://www.instagram.com/shumbola.uz/" target="_blank" className="hover:scale-110 transition-transform duration-300">
             <Image src={Instagram} alt="Instagram" width={25} height={25} />
           </Link>
-          <Link href="https://www.youtube.com/@Shumbola.1991" target="_blank" className="hover:scale-110 transition-transform duration-300">
-            <Image src={Youtube} alt="Youtube" width={25} height={25} />
-          </Link>
+
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -146,9 +144,7 @@ const Header: React.FC = () => {
             <Link href="https://www.instagram.com/shumbola.uz/">
               <Image src={Instagram} alt="Instagram" width={30} height={30} />
             </Link>
-            <Link href="https://www.youtube.com/@Shumbola.1991">
-              <Image src={Youtube} alt="Youtube" width={30} height={30} />
-            </Link>
+
           </div>
           <div className={`${scrolled ? "text-lg" : "text-[20px]"} flex items-center gap-2`}>
             {getFlag(language)}

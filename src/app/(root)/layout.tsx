@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Nunito } from "next/font/google";
+import "../globals.css";
 import AosProvider from "@/components/aos-provider";
 import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "@/context/LanguageContext";
+
+const nunito = Nunito({ 
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
   title: "Shumbola",
@@ -17,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`${nunito.variable} font-sans antialiased`}>
         <LanguageProvider>
           <AosProvider />
           {children}

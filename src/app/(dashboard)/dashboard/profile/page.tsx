@@ -105,18 +105,18 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-8">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6 md:space-y-8">
+      <div className="flex flex-col gap-1 md:gap-2">
+        <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600">
           Profil sozlamalari
         </h1>
-        <p className="text-gray-500">
+        <p className="text-sm text-gray-500">
           Shaxsiy ma'lumotlaringiz va parolingizni o'zgartiring.
         </p>
       </div>
 
-      <div className="max-w-2xl">
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-8">
+      <div className="w-full md:max-w-2xl">
+        <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-gray-100 space-y-6 md:space-y-8">
           <div className="flex flex-col items-center gap-6 pb-6 border-b border-gray-100">
             <div 
               onClick={() => fileInputRef.current?.click()}

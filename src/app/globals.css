@@ -124,6 +124,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+button, [role="button"], a {
+  cursor: pointer;
+}
+
 html {
   scroll-behavior: smooth;
 }

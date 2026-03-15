@@ -67,20 +67,20 @@ const ListProducts = () => {
                                     {product.type && <div className="flex items-center"><p className="text-[10px] text-gray-400 mt-0.5 mr-3">Tur: {product.type}</p> <p className="text-[10px] text-gray-400 mt-0.5">Olcham: {product.sizes}</p></div> }
                                 </div>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <button
-                                    onClick={(e) => handleEdit(e, product)}
-                                    className="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-all opacity-0 group-hover:opacity-100"
-                                >
-                                    <Edit2 className="w-5 h-5" />
-                                </button>
-                                <button
-                                    onClick={(e) => handleDelete(e, product.docId)}
-                                    className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all opacity-0 group-hover:opacity-100"
-                                >
-                                    <Trash2 className="w-5 h-5" />
-                                </button>
-                            </div>
+                        <div className="flex items-center gap-1 shrink-0">
+                            <button
+                                onClick={(e) => handleEdit(e, product)}
+                                className="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-all sm:opacity-0 sm:group-hover:opacity-100"
+                            >
+                                <Edit2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                            </button>
+                            <button
+                                onClick={(e) => handleDelete(e, product.docId)}
+                                className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all sm:opacity-0 sm:group-hover:opacity-100"
+                            >
+                                <Trash2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                            </button>
+                        </div>
                         </div>
                     ))
                 )}

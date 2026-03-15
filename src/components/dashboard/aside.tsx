@@ -11,7 +11,8 @@ import {
   Settings, 
   LogOut,
   Bell,
-  User
+  User,
+  X
 } from 'lucide-react';
 import { useAuth } from '@/context/auth-context';
 
@@ -43,14 +44,14 @@ const routes = [
   },
 ];
 
-const Aside = () => {
+const Aside = ({ onClose }: { onClose?: () => void }) => {
   const pathname = usePathname();
   const { logout, user } = useAuth();
 
   return (
-    <aside className="w-64 shrink-0 bg-white border-r border-gray-100 flex flex-col transition-all duration-300">
+    <aside className="h-full w-64 shrink-0 bg-white border-r border-gray-100 flex flex-col transition-all duration-300">
       {/* Brand & Logo Area */}
-      <div className="h-16 flex items-center px-6 border-b border-gray-100">
+      <div className="h-16 flex items-center justify-between px-6 border-b border-gray-100">
         <Link href="/dashboard" className="flex items-center gap-2">
           <div className="w-10 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xl">SH</span>
@@ -59,6 +60,16 @@ const Aside = () => {
             Shumbola
           </span>
         </Link>
+        
+        {/* Mobile Close Button */}
+        {onClose && (
+          <button 
+            onClick={onClose}
+            className="p-2 -mr-2 text-gray-400 hover:text-red-500 lg:hidden transition-colors"
+          >
+            <X size={20} />
+          </button>
+        )}
       </div>
 
       {/* Navigation Links */}
@@ -115,7 +126,11 @@ const Aside = () => {
           </div>
         </Link>
         <button 
-          onClick={logout}
+          onClick={() => {
+            if (window.confirm("Haqiqatan ham tizimdan chiqmoqchimisiz?")) {
+              logout();
+            }
+          }}
           className="flex items-center gap-2 text-sm font-medium text-red-500 hover:text-red-600 hover:bg-red-50 w-full px-3 py-2 rounded-lg transition-colors cursor-pointer"
         >
           <LogOut className="w-4 h-4" />

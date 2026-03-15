@@ -14,37 +14,35 @@ const ProductsPage = () => {
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-8">
-      <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6 md:space-y-8">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600">
             Mahsulotlar
           </h1>
-          <p className="text-gray-500">
+          <p className="text-sm text-gray-500 mt-1">
             Katalogdagi barcha mahsulotlarni boshqarish.
           </p>
         </div>
         <button 
           onClick={() => setShowAddModal(true)}
-          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-sm active:scale-95"
+          className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-sm active:scale-95"
         >
-          <Plus className="w-5 h-5" />
+          <Plus className="w-4 h-4" />
           <span>Yangi mahsulot</span>
         </button>
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-          <h2 className="font-bold text-gray-900 text-lg">Mahsulotlar ro'yxati</h2>
-          <div className="w-64 relative">
-             <input 
-               type="text" 
-               placeholder="Qidirish..." 
-               className="w-full px-4 py-2 rounded-xl border border-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all"
-             />
-          </div>
+        <div className="p-4 md:p-6 border-b border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <h2 className="font-bold text-gray-900">Mahsulotlar ro'yxati</h2>
+          <input 
+            type="text" 
+            placeholder="Qidirish..." 
+            className="w-full sm:w-56 px-4 py-2 rounded-xl border border-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm"
+          />
         </div>
-        <div className="min-h-[400px] flex flex-col bg-gray-50/20">
+        <div className="min-h-[300px] md:min-h-[400px] flex flex-col bg-gray-50/20">
           <ListProducts key={refreshKey} />
         </div>
       </div>

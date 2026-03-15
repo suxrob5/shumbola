@@ -31,7 +31,7 @@ export const ProductImageMap: Record<number, any> = {
 export const ProductData: ProductType[] = [];
 
 
-const products = [
+export const products = [
   {
     //qurt
     id: 100,

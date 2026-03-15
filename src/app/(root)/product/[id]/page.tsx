@@ -1,4 +1,4 @@
-import { ProductImageMap } from "@/backend/products-data";
+import { ProductImageMap, products } from "@/backend/products-data";
 import ProductDetail from "@/components/product/product-detail";
 import NotFound from "@/app/not-found";
 import { Suspense } from "react";
@@ -8,7 +8,13 @@ import { ProductType } from "@/types/types";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const data = await getDocuments("products");
+  let data: any[] = await getDocuments("products");
+  
+  // Fallback to static data if Firestore is not initialized (e.g. during build without env vars)
+  if (!data || data.length === 0) {
+    data = products;
+  }
+
   const uniqueIds = new Set<string>();
 
   data.forEach((doc: any) => {

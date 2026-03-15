@@ -8,7 +8,7 @@ import { ProductType } from "@/types/types";
 export async function generateStaticParams() {
   const data = await getDocuments("products");
   const params: { id: string }[] = [];
-  
+
   data.forEach((doc: any) => {
     if (doc.docId) params.push({ id: doc.docId.toString() });
     if (doc.id) params.push({ id: doc.id.toString() });
@@ -22,9 +22,9 @@ export default async function ProductPage(props: {
 }) {
   const { id: paramId } = await props.params;
   const data = await getDocuments("products");
-  
+
   // Find by internal numeric id first (priority), then by docId
-  const doc = data.find((p: any) => 
+  const doc = data.find((p: any) =>
     p.id?.toString() === paramId || p.docId === paramId
   ) as any;
 

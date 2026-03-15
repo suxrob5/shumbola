@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import "./globals.css";
 
 import { LanguageProvider } from "@/context/LanguageContext";
 

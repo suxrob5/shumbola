@@ -29,6 +29,12 @@ const ProfilePage = () => {
     setSuccess(false);
     setError("");
 
+    if (!db) {
+      setError("Xatolik: Ma'lumotlar bazasi bilan aloqa yo'q. Iltimos environment o'zgaruvchilarini tekshiring.");
+      setLoading(false);
+      return;
+    }
+
     try {
       // Fetch current user data from Firestore to verify old password
       const userRef = doc(db, "users", (user as any).docId);

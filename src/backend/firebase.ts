@@ -43,16 +43,20 @@ if (!isConfigValid) {
 
 const app = isConfigValid 
   ? (getApps().length > 0 ? getApp() : initializeApp(firebaseConfig))
-  : (null as any);
+  : null;
 
 export const analytics =
-  typeof window !== "undefined" && isConfigValid && firebaseConfig.measurementId
+  typeof window !== "undefined" && isConfigValid && firebaseConfig.measurementId && app
     ? getAnalytics(app)
     : null;
-export const db = app ? getFirestore(app) : null as any;
-export const auth = app ? getAuth(app) : null as any;
+export const db = app ? getFirestore(app) : null;
+export const auth = app ? getAuth(app) : null;
 
-export { signInWithEmailAndPassword, signOut, onAuthStateChanged };
+// Explicitly export auth functions to avoid bundler issues with re-exports
+export const signIn = signInWithEmailAndPassword;
+export const logOut = signOut;
+export const onAuthChanged = onAuthStateChanged;
+
 export type { User };
 
 // Ma'lumot qo'shish funksiyasi (Add data)

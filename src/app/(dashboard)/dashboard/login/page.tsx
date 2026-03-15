@@ -24,6 +24,12 @@ const LoginPage = () => {
     setLoading(true);
     setError("");
 
+    if (!db) {
+      setError("Xatolik: Ma'lumotlar bazasi bilan aloqa yo'q. Iltimos environment o'zgaruvchilarini tekshiring.");
+      setLoading(false);
+      return;
+    }
+
     try {
       // Query Firestore 'users' collection for the provided login (name)
       const q = query(collection(db, "users"), where("name", "==", login));

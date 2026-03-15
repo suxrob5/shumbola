@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { auth, onAuthStateChanged, User, signOut } from "@/backend/firebase";
+import { auth, onAuthChanged, User, logOut } from "@/backend/firebase";
 import { useRouter, usePathname } from "next/navigation";
 
 interface UserData {
@@ -38,20 +38,31 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       setUser(JSON.parse(savedUser));
     }
 
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      if (firebaseUser) {
-        setUser(firebaseUser);
-      } else {
-        // Only clear if there isn't a manual session
-        const manualSession = localStorage.getItem("shumbola_admin_session");
-        if (!manualSession) {
-          setUser(null);
-        }
-      }
+    if (!auth) {
+      console.warn("Firebase Auth not initialized. Session tracking disabled.");
       setLoading(false);
-    });
+      return;
+    }
 
-    return () => unsubscribe();
+    try {
+      const unsubscribe = onAuthChanged(auth, (firebaseUser: User | null) => {
+        if (firebaseUser) {
+          setUser(firebaseUser);
+        } else {
+          // Only clear if there isn't a manual session
+          const manualSession = localStorage.getItem("shumbola_admin_session");
+          if (!manualSession) {
+            setUser(null);
+          }
+        }
+        setLoading(false);
+      });
+
+      return () => unsubscribe();
+    } catch (err) {
+      console.error("onAuthChanged error:", err);
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -75,7 +86,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const logout = async () => {
     try {
-      await signOut(auth);
+      if (auth) {
+        await logOut(auth);
+      }
       localStorage.removeItem("shumbola_admin_session");
       setUser(null);
       router.push("/dashboard/login");

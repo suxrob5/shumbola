@@ -5,16 +5,18 @@ import { Suspense } from "react";
 import { getDocuments } from "@/backend/firebase";
 import { ProductType } from "@/types/types";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const data = await getDocuments("products");
-  const params: { id: string }[] = [];
+  const uniqueIds = new Set<string>();
 
   data.forEach((doc: any) => {
-    if (doc.docId) params.push({ id: doc.docId.toString() });
-    if (doc.id) params.push({ id: doc.id.toString() });
+    if (doc.docId) uniqueIds.add(doc.docId.toString());
+    if (doc.id) uniqueIds.add(doc.id.toString());
   });
 
-  return params;
+  return Array.from(uniqueIds).map(id => ({ id }));
 }
 
 export default async function ProductPage(props: {

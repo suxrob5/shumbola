@@ -10,6 +10,8 @@ type Props = {
   }>;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return catalogData.map((item) => ({
     id: item.link,

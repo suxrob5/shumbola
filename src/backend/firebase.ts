@@ -31,14 +31,19 @@ const firebaseConfig = {
 };
 
 // Handle initialization for Next.js SSR/Client
-const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+const isConfigValid = !!firebaseConfig.projectId;
 
-// Validate config to provide clearer errors
-if (!firebaseConfig.projectId && typeof window !== "undefined") {
-  console.error(
-    "Firebase error: NEXT_PUBLIC_DB_PROJECT_ID is missing from environment variables.",
-  );
+if (!isConfigValid) {
+  if (typeof window === "undefined") {
+    console.error("CRITICAL: Firebase Project ID is missing. Firestore will not work during build.");
+  } else {
+    console.error("Firebase error: NEXT_PUBLIC_DB_PROJECT_ID is missing from environment variables.");
+  }
 }
+
+const app = isConfigValid 
+  ? (getApps().length > 0 ? getApp() : initializeApp(firebaseConfig))
+  : (null as any);
 
 export const analytics =
   typeof window !== "undefined" && firebaseConfig.measurementId

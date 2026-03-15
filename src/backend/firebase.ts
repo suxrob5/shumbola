@@ -46,11 +46,11 @@ const app = isConfigValid
   : (null as any);
 
 export const analytics =
-  typeof window !== "undefined" && firebaseConfig.measurementId
+  typeof window !== "undefined" && isConfigValid && firebaseConfig.measurementId
     ? getAnalytics(app)
     : null;
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+export const db = app ? getFirestore(app) : null as any;
+export const auth = app ? getAuth(app) : null as any;
 
 export { signInWithEmailAndPassword, signOut, onAuthStateChanged };
 export type { User };

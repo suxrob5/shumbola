@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { User, Lock, Save, Loader2, ShieldCheck } from "lucide-react";
+import { User, Lock, Save, Loader2, ShieldCheck, Camera, Upload } from "lucide-react";
 import { useAuth } from "@/context/auth-context";
 import { db, updateDocument } from "@/backend/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -11,15 +11,36 @@ const ProfilePage = () => {
   const [name, setName] = useState("");
   const [oldPassword, setOldPassword] = useState("");
   const [password, setPassword] = useState("");
+  const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (user && (user as any).name) {
       setName((user as any).name);
     }
+    if (user && (user as any).image) {
+      setImage((user as any).image);
+    }
   }, [user]);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 2 * 1024 * 1024) {
+        alert("Rasm hajmi juda katta (maksimum 2MB)");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +76,7 @@ const ProfilePage = () => {
         return;
       }
 
-      const updates: any = { name };
+      const updates: any = { name, image };
       if (password) {
         updates.password = password;
       }
@@ -67,7 +88,8 @@ const ProfilePage = () => {
         // Update local session
         loginManual({
           ...(user as any),
-          name: name
+          name: name,
+          image: image
         });
         setPassword(""); // Clear password field
         setOldPassword(""); // Clear old password field
@@ -95,6 +117,29 @@ const ProfilePage = () => {
 
       <div className="max-w-2xl">
         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-8">
+          <div className="flex flex-col items-center gap-6 pb-6 border-b border-gray-100">
+            <div 
+              onClick={() => fileInputRef.current?.click()}
+              className="relative w-32 h-32 group cursor-pointer"
+            >
+              <div className="w-full h-full rounded-2xl bg-linear-to-br from-blue-50 to-blue-100 flex items-center justify-center text-blue-600 font-bold text-4xl overflow-hidden border-2 border-white shadow-sm transition-all group-hover:shadow-md">
+                {image ? (
+                  <img src={image} alt={name} className="w-full h-full object-cover" />
+                ) : (
+                  <span>{name[0]?.toUpperCase() || "A"}</span>
+                )}
+              </div>
+              <div className="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <Camera className="text-white w-8 h-8" />
+              </div>
+              <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" className="hidden" />
+            </div>
+            <div className="text-center">
+              <h3 className="text-lg font-bold text-gray-900">{name || "Admin User"}</h3>
+              <p className="text-sm text-gray-500">Profil rasmingizni o'zgartirish uchun rasm ustiga bosing</p>
+            </div>
+          </div>
+
           <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
             <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white">
               <ShieldCheck size={24} />

@@ -27,16 +27,6 @@ const routes = [
     href: "/dashboard/products",
   },
   {
-    label: "Buyurtmalar",
-    icon: ShoppingCart,
-    href: "/dashboard/orders",
-  },
-  {
-    label: "Xaridorlar",
-    icon: Users,
-    href: "/dashboard/customers",
-  },
-  {
     label: "Foydalanuvchilar",
     icon: Users,
     href: "/dashboard/users",
@@ -112,8 +102,12 @@ const Aside = () => {
       {/* Bottom User Area */}
       <div className="p-4 border-t border-gray-100 m-3 rounded-2xl bg-gray-50/50">
         <Link href="/dashboard/profile" className="flex items-center gap-3 mb-4 p-2 hover:bg-white rounded-xl transition-all group">
-          <div className="w-10 h-10 rounded-full bg-linear-to-br from-blue-100 to-blue-200 flex shrink-0 items-center justify-center text-blue-600 font-bold group-hover:scale-110 transition-transform">
-            {(user as any)?.name?.[0].toUpperCase() || (user as any)?.email?.[0].toUpperCase() || "A"}
+          <div className="w-10 h-10 rounded-full bg-linear-to-br from-blue-100 to-blue-200 flex shrink-0 items-center justify-center text-blue-600 font-bold group-hover:scale-110 transition-transform overflow-hidden">
+            {(user as any)?.image ? (
+              <img src={(user as any).image} alt={(user as any).name} className="w-full h-full object-cover" />
+            ) : (
+              <span>{(user as any)?.name?.[0].toUpperCase() || (user as any)?.email?.[0].toUpperCase() || "A"}</span>
+            )}
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-semibold text-gray-900">{(user as any)?.name || "Admin User"}</span>

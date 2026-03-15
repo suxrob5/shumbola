@@ -9,6 +9,7 @@ interface UserData {
   id: number;
   name: string;
   type: string;
+  image?: string;
 }
 
 interface AuthContextType {

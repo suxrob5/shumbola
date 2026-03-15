@@ -57,6 +57,10 @@ export type { User };
 
 // Ma'lumot qo'shish funksiyasi (Add data)
 export const addDocument = async (collectionName: string, data: any) => {
+  if (!db) {
+    console.warn("Firestore not initialized. Skipping addDocument.");
+    return { success: false, error: "Firestore not initialized" };
+  }
   try {
     const docRef = await addDoc(collection(db, collectionName), {
       ...data,
@@ -71,6 +75,10 @@ export const addDocument = async (collectionName: string, data: any) => {
 
 // Ma'lumotlarni olish funksiyasi (Get data)
 export const getDocuments = async (collectionName: string) => {
+  if (!db) {
+    console.warn(`Firestore not initialized. Skipping getDocuments for ${collectionName}.`);
+    return [];
+  }
   try {
     const q = query(
       collection(db, collectionName),
@@ -94,6 +102,10 @@ export const deleteDocument = async (collectionName: string, id: string) => {
     console.error("Error: ID is required for deleteDocument");
     return { success: false, error: "ID is required" };
   }
+  if (!db) {
+    console.warn("Firestore not initialized. Skipping deleteDocument.");
+    return { success: false, error: "Firestore not initialized" };
+  }
   try {
     await deleteDoc(doc(db, collectionName, id));
     return { success: true };
@@ -112,6 +124,10 @@ export const updateDocument = async (
   if (!id) {
     console.error("Error: ID is required for updateDocument");
     return { success: false, error: "ID is required" };
+  }
+  if (!db) {
+    console.warn("Firestore not initialized. Skipping updateDocument.");
+    return { success: false, error: "Firestore not initialized" };
   }
   try {
     await updateDoc(doc(db, collectionName, id), {

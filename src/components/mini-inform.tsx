@@ -29,6 +29,7 @@ const MiniInform = () => {
             data-aos="fade-up"
             data-aos-duration="700"
             data-aos-delay={index * 100}
+            suppressHydrationWarning
           >
             <div>
               <Image

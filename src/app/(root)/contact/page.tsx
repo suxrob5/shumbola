@@ -22,14 +22,14 @@ const Contact = () => {
       <Begin image={MainImg} />
       <main className="mx-auto max-w-[1920px] w-[90%] md:w-[80%] mt-10 md:mt-20 flex flex-col lg:flex-row justify-between items-start gap-10">
         {/* Contact input */}
-        <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-10 w-full lg:w-[64%]" data-aos="zoom-in">
-          <h1 className="text-2xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="150">
+        <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-10 w-full lg:w-[64%]" data-aos="zoom-in" suppressHydrationWarning>
+          <h1 className="text-2xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="150" suppressHydrationWarning>
             {t("contact.formTitle")}
           </h1>
           <div className="flex items-center justify-between">
             {/* Input form */}
             <form className=" flex flex-col gap-4 w-full">
-              <div data-aos="zoom-in" data-aos-delay="200" className="w-full">
+              <div data-aos="zoom-in" data-aos-delay="200" className="w-full" suppressHydrationWarning>
                 <FieldLabel htmlFor="fish" className="text-base">{t("contact.fio")}</FieldLabel>
                 <Input
                   id="fish"
@@ -38,7 +38,7 @@ const Contact = () => {
                   className="md:text-[16px] h-[50px] text-base bg-white border-none mt-1 w-full"
                 />
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4" data-aos="zoom-in" data-aos-delay="250">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4" data-aos="zoom-in" data-aos-delay="250" suppressHydrationWarning>
                 <div className="w-full">
                   <FieldLabel htmlFor="phone" className="text-base">{t("contact.phone")}</FieldLabel>
                   <Input
@@ -58,11 +58,11 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div className="w-full" data-aos="zoom-in" data-aos-delay="300">
+              <div className="w-full" data-aos="zoom-in" data-aos-delay="300" suppressHydrationWarning>
                 <FieldLabel htmlFor="comment" className="text-base">{t("contact.message")}</FieldLabel>
                 <Textarea id="comment" name="comment" placeholder={t("contact.placeholder")} className="md:text-[16px] h-[100px] text-base bg-white border-none mt-2 w-full" />
               </div>
-              <div data-aos="zoom-in" data-aos-delay="300">
+              <div data-aos="zoom-in" data-aos-delay="300" suppressHydrationWarning>
                 <button
                   type="submit"
                   className="mt-2 bg-[#3291D3] hover:bg-[#2578b5] transition-colors text-white font-semibold px-8 py-3 rounded-xl cursor-pointer"
@@ -76,7 +76,7 @@ const Contact = () => {
         </div>
         {/* About contact */}
         <div className="w-full lg:w-[35%] flex flex-col gap-5">
-          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in">
+          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" suppressHydrationWarning>
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
               <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
@@ -86,7 +86,7 @@ const Contact = () => {
               <Link href="tel:+998983315155" className="font-bold text-xl">+998 98 331 51 55</Link>
             </div>
           </div>
-          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="200" suppressHydrationWarning>
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
               <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
@@ -96,7 +96,7 @@ const Contact = () => {
               <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
             </div>
           </div>
-          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="250">
+          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="250" suppressHydrationWarning>
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
               <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>
@@ -106,7 +106,7 @@ const Contact = () => {
               <Link href="tel:+998958053996" className="font-bold text-xl">+998 95 805 39 96</Link>
             </div>
           </div>
-          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
+          <div className="bg-[#E8F1F9] p-4 rounded-xl" data-aos="zoom-in" data-aos-delay="300" suppressHydrationWarning>
             <div className="flex items-center justify-start ">
               <PhoneCall color="#368BC6" size={20} className="mr-2" />
               <h1 className="text-[#393F48] text-[18px]">{t("contact.phone")}</h1>

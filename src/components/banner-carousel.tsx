@@ -53,12 +53,14 @@ const BannerCarousel = () => {
                             <h1
                                 className="text-center font-black text-4xl sm:text-6xl md:text-7xl lg:text-9xl px-4 drop-shadow-2xl bg-linear-to-r text-white bg-clip-text uppercase tracking-wider"
                                 data-aos="fade-up"
+                                suppressHydrationWarning
                             >
                                 {slide.title.split(" — ")[0]}
                             </h1>
                             <div
                                 className="absolute bottom-12 md:bottom-20 text-center text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-4 drop-shadow-2xl mb-8"
                                 data-aos="fade-up"
+                                suppressHydrationWarning
                             >
                                 {slide.title.includes(" — ") ? slide.title.split(" — ")[1] : ""} {slide.subtitle}
                             </div>

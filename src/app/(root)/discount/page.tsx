@@ -19,6 +19,7 @@ const Discount = () => {
             className="text-3xl text-gray-400 font-semibold"
             data-aos="zoom-in"
             data-aos-duration="800"
+            suppressHydrationWarning
           >
             {t("discount.noDiscounts")}
           </h1>

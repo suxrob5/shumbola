@@ -22,14 +22,14 @@ const History = () => {
 
         {/* Kontent qismi */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[80%] max-w-[1920px] mx-auto gap-10 py-10">
-          <div className="w-full md:w-[50%]" data-aos="zoom-in" data-aos-duration="800">
+          <div className="w-full md:w-[50%]" data-aos="zoom-in" data-aos-duration="800" suppressHydrationWarning>
             <Image
               src={Workers}
               alt="workers"
               className="w-full h-auto rounded-2xl shadow-xl"
             />
           </div>
-          <div className="w-full md:w-[45%] md:text-inherit" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+          <div className="w-full md:w-[45%] md:text-inherit" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150" suppressHydrationWarning>
             <h1 className="text-3xl md:text-4xl font-bold">{t("aboutPage.historyTitle")}</h1>
             <p className="mt-3 text-sm md:text-base text-[#484D53] leading-relaxed">
               {t("aboutPage.historyText")}
@@ -42,7 +42,7 @@ const History = () => {
 
       {/* 3. Foto about - Fotootchet */}
       <div className="mt-20 md:mt-30 w-[90%] md:w-[80%] max-w-[1920px] mx-auto pb-20">
-        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left" data-aos="zoom-in" data-aos-duration="700">
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left" data-aos="zoom-in" data-aos-duration="700" suppressHydrationWarning>
           {t("aboutPage.photoReport")}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
@@ -53,6 +53,7 @@ const History = () => {
             data-aos="zoom-in"
             data-aos-duration="700"
             data-aos-delay="0"
+            suppressHydrationWarning
           />
           <Image
             src={AboutProduct2}
@@ -61,6 +62,7 @@ const History = () => {
             data-aos="zoom-in"
             data-aos-duration="700"
             data-aos-delay="150"
+            suppressHydrationWarning
           />
           {/* Uchinchi rasm bo'lsa shu yerga qo'shiladi */}
         </div>

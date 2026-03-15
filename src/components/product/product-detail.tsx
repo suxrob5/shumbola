@@ -49,6 +49,7 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
                             className="w-full lg:w-[45%] flex justify-center"
                             data-aos="zoom-in"
                             data-aos-duration="1000"
+                            suppressHydrationWarning
                         >
                             <div className="relative w-full max-w-[500px] aspect-square">
                                 <Image
@@ -67,6 +68,7 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
                                 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight"
                                 data-aos="fade-left"
                                 data-aos-duration="800"
+                                suppressHydrationWarning
                             >
                                 {getLocalizedName(product)}
                             </h1>
@@ -76,6 +78,7 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
                                 data-aos="fade-left"
                                 data-aos-duration="800"
                                 data-aos-delay="200"
+                                suppressHydrationWarning
                             >
                                 {getLocalizedDesc(product)}
                             </p>
@@ -85,6 +88,7 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
                                 data-aos="fade-up"
                                 data-aos-duration="800"
                                 data-aos-delay="400"
+                                suppressHydrationWarning
                             >
                                 <p className="text-xl font-semibold text-gray-800 mb-4">
                                     {t("product.chooseSize")}
@@ -112,6 +116,7 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
                                 data-aos="fade-up"
                                 data-aos-duration="800"
                                 data-aos-delay="600"
+                                suppressHydrationWarning
                             >
                                 <p className="text-blue-800 font-medium italic">
                                     {t("product.naturalNotice")}

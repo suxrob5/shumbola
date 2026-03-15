@@ -14,6 +14,7 @@ const AboutBrand = () => {
         className="shrink-0"
         data-aos="fade-up"
         data-aos-duration="800"
+        suppressHydrationWarning
       >
         <Image
           src={About}
@@ -28,6 +29,7 @@ const AboutBrand = () => {
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-delay="150"
+        suppressHydrationWarning
       >
         <h2 className="text-3xl md:text-4xl font-bold">{t("aboutBrand.title")}</h2>
         <p className="text-base md:text-[19px] text-[#484D53] mt-5 leading-relaxed">

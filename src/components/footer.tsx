@@ -57,12 +57,12 @@ const Footer = () => {
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto border-t border-gray-300 mt-16 md:mt-[100px] pt-10" />
       <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
-          <Link href="/" className="flex justify-center sm:justify-start" data-aos="fade-up">
+          <Link href="/" className="flex justify-center sm:justify-start" data-aos="fade-up" suppressHydrationWarning>
             <Image src={MainImg} alt="logo" width={120} className="mix-blend-multiply cursor-pointer hover:opacity-80 transition-opacity h-[140px]" />
           </Link>
 
           {[SECTIONS_LEFT, SECTIONS_RIGHT].map((section, i) => (
-            <div key={i} className="text-center sm:text-left" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+            <div key={i} className="text-center sm:text-left" data-aos="fade-up" data-aos-delay={(i + 1) * 100} suppressHydrationWarning>
               <h3 className={`text-xl md:text-2xl font-bold mb-4 ${i === 1 ? "hidden sm:block text-transparent" : ""}`}>
                 {i === 0 ? t("footer.section") : "\u200E "}
               </h3>
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
           ))}
 
-          <div className="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="300">
+          <div className="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="300" suppressHydrationWarning>
             <div className="text-center sm:text-left">
               <h3 className="text-xl md:text-2xl font-bold mb-4">{t("footer.contacts")}</h3>
               <div className="flex flex-col gap-3 items-center sm:items-start">
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="400">
+          <div data-aos="fade-up" data-aos-delay="400" suppressHydrationWarning>
             <h3 className="text-xl md:text-2xl font-bold mb-4">{t("footer.socials")}</h3>
             <div className="flex flex-col gap-3 items-center sm:items-start">
               <ContactButton text={t("footer.address")} isLink={false} />

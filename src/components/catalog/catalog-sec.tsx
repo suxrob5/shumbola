@@ -5,13 +5,31 @@ import Link from "next/link";
 import RightIcon from "@/assets/icons/right.png";
 import { catalogData } from "@/backend/cat-data";
 import { useTranslation } from "@/hooks/useTranslation";
-import { ProductData } from "@/backend/products-data";
-
+import { ProductImageMap } from "@/backend/products-data";
+import { useEffect, useState } from "react";
+import { getDocuments } from "@/backend/firebase";
+import { ProductType } from "@/types/types";
 const CatalogSec = () => {
   const { t, language } = useTranslation();
 
+  const [products, setProducts] = useState<ProductType[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getDocuments("products");
+      // Format data and attach images
+      const formattedData = data.map((doc: any) => ({
+        ...doc,
+        imageUrl: ProductImageMap[Number(doc.id)] || doc.imageUrl || "",
+        id: Number(doc.id)
+      }));
+      setProducts(formattedData);
+    }
+    fetchData();
+  }, []);
+
   const catData = catalogData.map(cat => {
-    const findData = ProductData.find(p => p.type === cat.catType)
+    const findData = products.find(p => p.type === cat.catType)
     return {
       ...cat,
       products: findData
@@ -32,6 +50,7 @@ const CatalogSec = () => {
               data-aos="fade-up"
               data-aos-duration="700"
               data-aos-delay={index * 120}
+              suppressHydrationWarning
             >
               {/* Rasm - Fon sifatida */}
               <Image

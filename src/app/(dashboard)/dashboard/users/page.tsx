@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Users, UserPlus, Trash2, Shield, Loader2, Camera, Upload, Edit2 } from "lucide-react";
+import { Users, UserPlus, Trash2, Shield, Loader2, Camera, Upload, Edit2, Lock, EyeOff, Eye } from "lucide-react";
 import { getDocuments, addDocument, deleteDocument, updateDocument } from "@/backend/firebase";
 
 interface AdminUser {
@@ -22,6 +22,7 @@ const UsersPage = () => {
   const [addingUser, setAddingUser] = useState(false);
   const [editingUser, setEditingUser] = useState<AdminUser | null>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -148,12 +149,27 @@ const UsersPage = () => {
               </div>
               <div className="space-y-1">
                 <label className="text-sm font-medium text-gray-700">Parol</label>
+
+                <div className="relative group">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                    placeholder="••••••••"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-[#368BC6] transition-colors cursor-pointer"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
+                </div>
                 <input
                   type="text"
-                  value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 outline-none"
                 />
               </div>
               <div className="space-y-1">

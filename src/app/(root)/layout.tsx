@@ -10,18 +10,18 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-export const metadata: Metadata = {
-  title: "Shumbola",
-  description: "Natural products",
+export const metadata = {
+  title: "Shumbolla - yong‘oq va quritilgan mevalar | Rasmiy sayt",
+  description:
+    "Shumbolla tabiiy mahsulotlar: pista, bodom, keshyu va yong‘oq mahsulotlari",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`${nunito.variable} font-sans antialiased`}>
         <LanguageProvider>
           <AosProvider />

@@ -42,7 +42,7 @@ const LoginPage = () => {
       }
 
       const userData = querySnapshot.docs[0].data();
-      
+
       // Verify password from Firestore
       if (userData.password === password) {
         // Success! Use loginManual to set session and redirect
@@ -71,15 +71,15 @@ const LoginPage = () => {
           <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-[#368BC6] blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-[#368BC6] blur-3xl"></div>
         </div>
-        
+
         <div className="relative z-10 text-center">
           <div className="relative w-full max-w-md aspect-square mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl skew-y-3 -rotate-3">
-             <Image 
-                src={BannerImg} 
-                alt="Shumbola Banner" 
-                fill 
-                className="object-cover"
-             />
+            <Image
+              src={BannerImg}
+              alt="Shumbola Banner"
+              fill
+              className="object-cover"
+            />
           </div>
           <h1 className="text-4xl font-extrabold text-[#368BC6] mb-4">Shumbola Admin</h1>
           <p className="text-gray-600 text-lg max-w-sm mx-auto">
@@ -110,7 +110,7 @@ const LoginPage = () => {
                 <input
                   type="text"
                   value={login}
-                  onChange={(e) => setLogin(e.target.value)}
+                  onChange={(e) => setLogin(e.target.value.trim())}
                   required
                   placeholder="Loginni kiriting"
                   className="block w-full pl-12 pr-4 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#368BC6] outline-none transition-all text-gray-900 font-medium"
@@ -127,7 +127,7 @@ const LoginPage = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value.trim())}
                   required
                   placeholder="••••••••"
                   className="block w-full pl-12 pr-12 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#368BC6] outline-none transition-all text-gray-900 font-medium"

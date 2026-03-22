@@ -1,12 +1,13 @@
 "use client";
 
-// images
-import FirstSection from "@/components/about/first-section";
-// Components
+// components
 import History from "@/components/about/history";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Begin from "@/components/name";
+import FirstSection from "@/components/about/first-section";
+
+// others
 import { useTranslation } from "@/hooks/useTranslation";
 
 const About = () => {

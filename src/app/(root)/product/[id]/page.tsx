@@ -1,6 +1,8 @@
-
-import ProductDetail from "@/components/product/product-detail";
+// components
 import NotFound from "@/app/not-found";
+import ProductDetail from "@/components/product/product-detail";
+
+// others
 import { Suspense } from "react";
 import { getDocuments } from "@/backend/firebase";
 import { ProductType } from "@/types/types";

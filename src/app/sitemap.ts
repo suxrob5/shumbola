@@ -2,8 +2,6 @@ import { getDocuments } from "@/backend/firebase";
 
 export default async function sitemap() {
   const products = await getDocuments("products");
-  console.log(products);
-
   return [
     {
       url: "https://shumbolla.uz",

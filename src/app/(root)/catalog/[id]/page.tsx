@@ -1,8 +1,11 @@
-import { catalogData } from "@/backend/cat-data";
+// components
 import IdPage from "@/components/catalog/id-page";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import NotFound from "@/components/not-found";
+
+// others
+import { catalogData } from "@/backend/cat-data";
 
 type Props = {
   params: Promise<{

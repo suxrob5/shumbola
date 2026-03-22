@@ -1,9 +1,12 @@
 "use client";
 
-import Header from "@/components/header";
+// components
 import Begin from "@/components/name";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 import CatalogSec from "@/components/catalog/catalog-sec";
+
+// others
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Catalog = () => {

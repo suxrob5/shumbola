@@ -1,7 +1,5 @@
-import React from "react";
+import NotFound from "@/app/not-found";
 
-const Product = () => {
-  return <div>Product</div>;
-};
-
-export default Product;
+export default function Product() {
+  return <NotFound />;
+}

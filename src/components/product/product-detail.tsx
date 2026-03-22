@@ -35,13 +35,13 @@ export default function ProductDetail({ product, id }: ProductDetailProps) {
     };
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col overflow-x-hidden">
             <header>
                 <Header />
             </header>
 
-            <main className="grow flex items-center">
-                <div className="mx-auto max-w-[1920px] w-[90%] lg:w-[80%] xl:w-[70%] py-10 md:py-20 lg:mt-20">
+            <main className="grow pt-28 pb-10">
+                <div className="mx-auto max-w-[1920px] w-[90%] lg:w-[80%] xl:w-[70%]">
                     <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
 
                         {/* Rasm qismi */}

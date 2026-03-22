@@ -26,7 +26,7 @@ const Footer = () => {
 
   const SOCIALS = [
     { name: "tg", icon: Telegram, href: "https://t.me/shumbolauzz" },
-    { name: "fb", icon: Facebook, href: "https://www.facebook.com/shumbola.uz/" },
+    { name: "fb", icon: Facebook, href: "https://www.facebook.com/shum.bola.738822" },
     { name: "insta", icon: Instagram, href: "https://www.instagram.com/shumbola.uz/" },
     { name: "youtube", icon: Youtube, href: "https://www.youtube.com/@Shumbola.1991" },
   ];
@@ -89,8 +89,8 @@ const Footer = () => {
               <div className="flex gap-3 justify-center sm:justify-start">
                 {SOCIALS.map((social) => (
                   <Link key={social.name} href={social.href} target="_blank">
-                    <button className="bg-[#E8F1F9] rounded-2xl p-3 cursor-pointer hover:bg-blue-100 hover:scale-110 transition-all duration-300">
-                      <Image src={social.icon} alt={social.name} width={25} height={25} />
+                    <button className="bg-[#E8F1F9] rounded-2xl w-11 h-11 flex items-center justify-center cursor-pointer hover:bg-blue-100 hover:scale-110 transition-all duration-300">
+                      <Image src={social.icon} alt={social.name} width={22} height={22} className="object-contain" />
                     </button>
                   </Link>
                 ))}

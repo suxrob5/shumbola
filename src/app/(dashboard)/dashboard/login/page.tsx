@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { Lock, User, Loader2, Eye, EyeOff } from "lucide-react";
 import Image from "next/image";
-import BannerImg from "@/assets/images/contact/contact.png"; // Reusing an existing image for style
+import BannerImg from "@/assets/images/admin.png";
 
 const LoginPage = () => {
   const [login, setLogin] = useState("");

@@ -1,23 +1,13 @@
 // catalog img
 import Qurt from "@/assets/images/catalog/qurt.png";
-import ToshQurt from "@/assets/images/catalog/tosh_qurt.png";
 import Bodom from "@/assets/images/catalog/bodom.png";
 import OrikDanak from "@/assets/images/catalog/orik_danak.png";
 import YerYongoq from "@/assets/images/catalog/yer_yongoq.png";
 import Kaju from "@/assets/images/catalog/kaju.png";
-// product img
-import QurtP from "@/assets/images/products/qurt.png";
-import ToshQurtP from "@/assets/images/products/tosh-qurt.png";
-import BodomP from "@/assets/images/products/bodom.png";
-import OrikDanakP from "@/assets/images/products/orik-danak.png";
-import YerYongoqP from "@/assets/images/products/yer-yongogi.png";
-import KeshuP from "@/assets/images/products/keshu.png";
-import SluguniP from "@/assets/images/products/sluguni.png";
-import Pista from "@/assets/images/products/pista.png";
-import PistaTuzsizP from "@/assets/images/products/pista-tuzsiz.png";
-import PistaTuzliP from "@/assets/images/products/pista-tuzli.png";
-import XandomPistaP from "@/assets/images/products/xandom-pista.png";
-import XandomPista2P from "@/assets/images/products/xandom-pista2.png";
+import SluguniP from "@/assets/images/catalog/sluguni.png";
+import Pista from "@/assets/images/catalog/pista.png";
+import XandomPistaP from "@/assets/images/catalog/xandom-pista.png";
+
 import { CtType } from "@/types/types";
 
 

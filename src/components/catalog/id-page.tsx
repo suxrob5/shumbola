@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ProductType } from "@/types/types";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
-import { ProductImageMap } from "@/backend/products-data";
 import { useEffect, useState } from "react";
 import { getDocuments } from "@/backend/firebase";
 
@@ -22,7 +21,7 @@ const IdPage = ({ item }: any) => {
       // Format data and attach images
       const formattedData = data.map((doc: any) => ({
         ...doc,
-        imageUrl: ProductImageMap[doc.id] || "",
+        imageUrl: doc.image || doc.imageUrl || "",
         id: Number(doc.id) // Ensure ID is a number since it was stringified for Firestore document IDs
       }));
       setProducts(formattedData);
@@ -92,12 +91,18 @@ const IdPage = ({ item }: any) => {
             suppressHydrationWarning
           >
             <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl bg-white shadow-sm border border-[#368BC6]/10">
-              <Image
-                src={product.imageUrl || ProductImageMap[Number(product.id)] || ""}
-                alt={getLocalizedName(product)}
-                fill
-                className="object-contain group-hover:scale-105 transition-transform duration-300"
-              />
+              {product.imageUrl ? (
+                <Image
+                  src={product.imageUrl}
+                  alt={getLocalizedName(product)}
+                  fill
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-400 text-sm">
+                  <span>Rasm yo'q</span>
+                </div>
+              )}
             </div>
             <div className="mt-4 text-center">
               <h1 className="text-lg md:text-xl font-semibold text-gray-800">

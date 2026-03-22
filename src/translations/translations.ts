@@ -11,7 +11,7 @@ export const translations = {
     aboutBrand: {
       title: "О бренде",
       description:
-        "Бренд Shumbola основан в 2010 году как небольшая семейная компания из трёх человек, с простой, но сильной идеей — создавать натуральные продукты, вкусу которых можно доверять. За годы развития Shumbola превратился в международную компанию с более чем 700 сотрудниками, 6 производственными площадками и экспортом в 12+ стран мира. Сегодня продукция ERMAK производится не только в Узбекистане, но и на современных мощностях в Турции, а представительства компании открыты в ОАЭ и Южной Корее. Несмотря на масштаб и международное присутствие, мы сохраняем свои корни и философию – создавать честные, натуральные и вкусные продукты, сделанные с любовью и ответственностью. ERMAK продолжает расти, объединяя традиции, технологии и доверие миллионов потребителей.",
+        "Бренд Shumbola был основан в 2023 году как небольшое семейное предприятие из четырех человек, в основе которого лежала простая, но сильная стратегическая идея — создавать натуральные продукты из курта, вкусу которых можно доверять. За годы развития бренд Shumbola расширил ассортимент выпускаемой продукции, заняв свою нишу, особенно благодаря снекам чак-чук, семечкам и продуктам из курта. Сегодня компания регулярно расширяет свой ассортимент, уделяя особое внимание производству качественных и вкусных продуктов. На сегодняшний день на предприятии работает более 300 сотрудников и произведено более 100 000 единиц продукции. Несмотря на расширение масштабов, мы сохраняем свои корни и основные ценности — создание честных, натуральных и надежных продуктов, приготовленных с любовью и ответственностью. Сочетая традиции и современный подход, Shumbola продолжает развиваться, завоевывая доверие потребителей.",
     },
     footer: {
       section: "Раздел",
@@ -45,7 +45,7 @@ export const translations = {
     aboutPage: {
       historyTitle: "История компании",
       historyText:
-        "В 2022 году под брендом Shumbola впервые в Узбекистане организовали фабричную переработку, производство и реализацию продукции из семян подсолнечника. С 2024 года ERMAK — первый и единственный в Узбекистане производитель курта в фабричных условиях. Мы постоянно расширяем линейку продукции. Под единым брендом ERMAK сегодня выпускаются семечки, курт, сухофрукты и сушки. Со дня основания девизом компании стал слоган: «Полезно, вкусно, чисто». Этим главным критериям соответствует каждый продукт торговой марки ERMAK.",
+        "В 2023 году под брендом Shumbola в Узбекистане было налажено промышленное перерабатывание, производство и продажа семян подсолнечника. С 2024 года Shumbola стала одной из ведущих компаний, запустивших производство курута в заводских условиях. Мы постоянно расширяем ассортимент продукции. Сегодня под единым брендом Shumbola выпускаются фисташки, курут, сушёные фрукты и сушки. С момента основания компании наш девиз: «Полезно, вкусно, чисто». Каждый продукт под торговой маркой Shumbola полностью соответствует этим принципам.",
       photoReport: "Фотоотчет",
     },
     catalog: {
@@ -83,7 +83,7 @@ export const translations = {
     aboutBrand: {
       title: "Brend haqida",
       description:
-        "Shumbola brendi 2010 yilda uch kishidan iborat kichik oilaviy korxona sifatida tashkil etilgan bo'lib, uning asosi oddiy, ammo kuchli g'oya — ta'miga ishonish mumkin bo'lgan tabiiy mahsulotlar yaratish edi. Rivojlanish yillari davomida Shumbola 700 dan ortiq xodimga ega, 6 ta ishlab chiqarish maydonchasi va dunyoning 12 dan ortiq mamlakatlariga eksport qiluvchi xalqaro kompaniyaga aylandi. Bugungi kunda ERMAK mahsulotlari nafaqat O'zbekistonda, balki Turkiyadagi zamonaviy quvvatlarda ham ishlab chiqarilmoqda, kompaniya vakolatxonalari esa BAA va Janubiy Koreyada ochilgan. Ko'lam va xalqaro miqyosga qaramay, biz o'z ildizlarimiz va falsafamizni — mehr va mas'uliyat bilan tayyorlangan halol, tabiiy va mazali mahsulotlar yaratishni saqlab qolamiz. ERMAK an'analarni, texnologiyalarni va millionlab iste'molchilar ishonchini birlashtirgan holda o'sishda davom etmoqda.",
+        "Shumbola brendi 2023-yilda to'rt kishidan iborat kichik oilaviy korxona sifatida tashkil etilgan bo'lib, uning asosi oddiy, ammo kuchli strategik g'oya - ta'miga ishonish mumkin boʻlgan tabiiy qurt mahsulotlar yaratish edi. Rivojlanish yillari davomida Shumbola brendi turli xil mahsulot turlarini kengaytirib, ayniqsa chaq-chuq , semechkalar va qurt mahsulotlari bilan o'z o'rnini topdi. Bugungi kunda kompaniya o'z assortimentini muntazam ravishda kengaytirib, sifatli va mazali mahsulotlar ishlab chiqarishga alohida e'tibor qaratmoqda. Shu kungacha korxonada 300dan ziyod ishchilar va 100000 koproq mahsulot ishlab chiqarildi. Koʻlam kengayib borayotganiga qaramay, biz o'z ildizlarimiz va asosiy qadriyatlarimizni - mehr va mas'uliyat bilan tayyorlangan halol, tabiiy va ishonchli mahsulotlar yaratishni saqlab qolamiz. Shumbola an'analar va zamonaviy yondashuvni birlashtirgan holda, iste'molchilar ishonchini qozonib, rivojlanishda davom etmoqda.",
     },
     footer: {
       section: "Bo'lim",
@@ -117,7 +117,7 @@ export const translations = {
     aboutPage: {
       historyTitle: "Kompaniya tarixi",
       historyText:
-        "2022 yilda Shumbola brendi ostida O'zbekistonda ilk bor kungaboqar urug'ini zavodda qayta ishlash, ishlab chiqarish va sotish tashkil etildi. 2024 yildan boshlab ERMAK O'zbekistondagi zavod sharoitida qurt ishlab chiqaruvchi birinchi va yagona korxonadir. Biz mahsulot turini doimiy ravishda kengaytirib bormoqdamiz. Bugungi kunda yagona ERMAK brendi ostida pista, qurt, quritilgan mevalar va sushkilar ishlab chiqarilmoqda. Kompaniya tashkil topgan kundan boshlab shiorimiz: «Foydali, mazali, toza». ERMAK savdo belgisining har bir mahsuloti ushbu asosiy mezonlarga javob beradi.",
+        "2023-yilda Shumbola brendi ostida O‘zbekistonda kungaboqar urug‘ini zavod sharoitida qayta ishlash, ishlab chiqarish va sotish yo‘lga qo‘yildi. 2024-yildan boshlab Shumbola zavod sharoitida qurt ishlab chiqarishni yo‘lga qo‘ygan yetakchi korxonalardan biriga aylandi. Biz mahsulot turini doimiy ravishda kengaytirib bormoqdamiz. Bugungi kunda yagona Shumbola brendi ostida pista, qurt, quritilgan mevalar va sushkilar ishlab chiqarilmoqda. Kompaniya tashkil topgan kundan boshlab bizning shiorimiz: «Foydali, mazali, toza». Shumbola savdo belgisidagi har bir mahsulot ushbu mezonlarga to‘liq javob beradi.",
       photoReport: "Fotohisobot",
     },
     catalog: {
@@ -155,7 +155,7 @@ export const translations = {
     aboutBrand: {
       title: "About Brand",
       description:
-        "The Shumbola brand was founded in 2010 as a small family company of three people, with a simple but strong idea — to create natural products whose taste can be trusted. Over the years of development, Shumbola has grown into an international company with more than 700 employees, 6 production sites, and exports to 12+ countries worldwide. Today, ERMAK products are produced not only in Uzbekistan but also at modern facilities in Turkey, and the company's representative offices are open in the UAE and South Korea. Despite the scale and international presence, we maintain our roots and philosophy – to create honest, natural, and tasty products made with love and responsibility. ERMAK continues to grow, combining traditions, technologies, and the trust of millions of consumers.",
+        "The Shumbola brand was founded in 2023 as a small family enterprise of four people, based on a simple but strong strategic idea — to create natural qurt products whose taste can be trusted. Over the years of development, the Shumbola brand has expanded its product range, finding its niche especially with snacks (chaq-chuq), sunflower seeds, and qurt products. Today, the company regularly expands its assortment, paying special attention to the production of high-quality and tasty products. To date, the enterprise has more than 300 employees and has produced over 100,000 units of products. Despite the expanding scale, we maintain our roots and core values — creating honest, natural, and reliable products made with love and responsibility. By combining traditions and a modern approach, Shumbola continues to develop, earning the trust of consumers.",
     },
     footer: {
       section: "Section",
@@ -189,7 +189,7 @@ export const translations = {
     aboutPage: {
       historyTitle: "Company History",
       historyText:
-        "In 2022, under the Shumbola brand, factory processing, production, and sale of sunflower seed products were organized for the first time in Uzbekistan. Since 2024, ERMAK has been the first and only producer of qurt in factory conditions in Uzbekistan. We are constantly expanding our product line. Today, seeds, qurt, dried fruits, and sushki are produced under the single ERMAK brand. Since the day of foundation, the company's motto has been: «Healthy, tasty, clean». Every product of the ERMAK trademark meets these main criteria.",
+        "In 2023, under the Shumbola brand, industrial processing, production, and sales of sunflower seeds were launched in Uzbekistan. Since 2024, Shumbola has become one of the leading companies to establish factory-scale production of qurt. We continuously expand our product range. Today, under the unified Shumbola brand, pistachios, qurt, dried fruits, and crackers are produced. Since the company’s foundation, our motto has been: “Healthy, tasty, clean.” Every product under the Shumbola trademark fully meets these core values.",
       photoReport: "Photo Report",
     },
     catalog: {

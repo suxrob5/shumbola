@@ -1,4 +1,4 @@
-import { ProductImageMap, products } from "@/backend/products-data";
+
 import ProductDetail from "@/components/product/product-detail";
 import NotFound from "@/app/not-found";
 import { Suspense } from "react";
@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   
   // Fallback to static data if Firestore is not initialized (e.g. during build without env vars)
   if (!data || data.length === 0) {
-    data = products;
+    return [];
   }
 
   const uniqueIds = new Set<string>();
@@ -45,7 +45,7 @@ export default async function ProductPage(props: {
 
   const product = {
     ...serializableDoc,
-    imageUrl: ProductImageMap[Number(doc.id)] || doc.imageUrl || "",
+    imageUrl: doc.image || doc.imageUrl || "",
     id: Number(doc.id)
   } as ProductType;
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import RightIcon from "@/assets/icons/right.png";
 import { catalogData } from "@/backend/cat-data";
 import { useTranslation } from "@/hooks/useTranslation";
-import { ProductImageMap } from "@/backend/products-data";
+
 import { useEffect, useState } from "react";
 import { getDocuments } from "@/backend/firebase";
 import { ProductType } from "@/types/types";
@@ -20,7 +20,7 @@ const CatalogSec = () => {
       // Format data and attach images
       const formattedData = data.map((doc: any) => ({
         ...doc,
-        imageUrl: ProductImageMap[Number(doc.id)] || doc.imageUrl || "",
+        imageUrl: doc.image || doc.imageUrl || "",
         id: Number(doc.id)
       }));
       setProducts(formattedData);

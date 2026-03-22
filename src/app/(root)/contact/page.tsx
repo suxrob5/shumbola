@@ -33,7 +33,7 @@ const Contact = () => {
       <header>
         <Header />
       </header>
-      <Begin image={MainImg} />
+      <Begin value={t("nav.contacts")} />
       <main className="mx-auto max-w-[1920px] w-[90%] md:w-[80%] mt-10 md:mt-20 flex flex-col lg:flex-row justify-between items-start gap-10">
         {/* Contact input */}
         <div className="bg-[#E8F1F9] rounded-xl p-6 md:p-10 w-full lg:w-[64%]" data-aos="zoom-in" suppressHydrationWarning>

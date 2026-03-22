@@ -1,16 +1,20 @@
+"use client";
+
 import Header from "@/components/header";
 import Begin from "@/components/name";
-import MainImg from "@/assets/images/catalog/main.png";
 import Footer from "@/components/footer";
 import CatalogSec from "@/components/catalog/catalog-sec";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Catalog = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen">
       <header>
         <Header />
       </header>
-      <Begin image={MainImg} />
+      <Begin value={t("nav.catalog")} />
 
       <main className="max-w-[1920px] w-[90%] md:w-[70%] mx-auto mt-10 md:mt-20 lg:mt-30 grow">
         <section>

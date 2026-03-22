@@ -2,7 +2,6 @@
 
 import Header from "@/components/header";
 import Begin from "@/components/name";
-import MainImg from "@/assets/images/discount.png";
 import Footer from "@/components/footer";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -13,7 +12,7 @@ const Discount = () => {
     <div>
       <header>
         <Header />
-        <Begin image={MainImg} />
+        <Begin value={t("nav.discount")} />
         <main className="mt-[200px] flex justify-center items-center">
           <h1
             className="text-3xl text-gray-400 font-semibold"

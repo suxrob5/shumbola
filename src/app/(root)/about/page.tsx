@@ -1,18 +1,22 @@
+"use client";
+
 // images
 import FirstSection from "@/components/about/first-section";
-import AboutCm from "@/assets/images/about/about-company.png";
 // Components
 import History from "@/components/about/history";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Begin from "@/components/name";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* Header */}
       <Header />
-      <Begin image={AboutCm} />
+      <Begin value={t("nav.about")} />
 
       <main className="mt-[100px]">
         {/* first section */}

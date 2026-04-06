@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { auth, db } from "@/backend/firebase";
+
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { Lock, User, Loader2, Eye, EyeOff } from "lucide-react";
@@ -43,7 +44,7 @@ const LoginPage = () => {
 
       const userData = querySnapshot.docs[0].data();
 
-      // Verify password from Firestore
+      // Verify password from Firestore (plain text comparison)
       if (userData.password === password) {
         // Success! Use loginManual to set session and redirect
         loginManual({
@@ -55,6 +56,8 @@ const LoginPage = () => {
       } else {
         setError("Login yoki parol noto'g'ri.");
       }
+
+
     } catch (err: any) {
       console.error("Login error:", err);
       setError("Xatolik yuz berdi. Iltimos qaytadan urining.");

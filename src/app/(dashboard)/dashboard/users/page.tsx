@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Users, UserPlus, Trash2, Shield, Loader2, Camera, Upload, Edit2, Lock, EyeOff, Eye } from "lucide-react";
 import { getDocuments, addDocument, deleteDocument, updateDocument } from "@/backend/firebase";
 
+
 interface AdminUser {
   docId: string;
   name: string;
@@ -70,6 +71,7 @@ const UsersPage = () => {
       image: newImage,
     };
 
+
     let result;
     if (editingUser) {
       result = await updateDocument("users", editingUser.docId, userData);
@@ -77,6 +79,7 @@ const UsersPage = () => {
       const maxId = users.reduce((max, user) => Math.max(max, (user as any).id || 0), 0);
       result = await addDocument("users", { ...userData, id: maxId + 1 });
     }
+
 
     if (result.success) {
       setNewName("");
@@ -167,10 +170,6 @@ const UsersPage = () => {
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                   </button>
                 </div>
-                <input
-                  type="text"
-                  required
-                />
               </div>
               <div className="space-y-1">
                 <label className="text-sm font-medium text-gray-700">Turi</label>
@@ -271,6 +270,8 @@ const UsersPage = () => {
                       </div>
                     </td>
                     <td className="px-5 py-4 text-gray-500 font-mono text-xs">{user.password}</td>
+
+
                     <td className="px-5 py-4">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-600 capitalize">
                         <Shield className="w-3 h-3" />

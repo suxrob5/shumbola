@@ -4,6 +4,11 @@ import Image3 from "@/assets/icons/3.png";
 import Image4 from "@/assets/icons/4.png";
 import Image5 from "@/assets/icons/5.png";
 
+const year = 2023;
+const currentYear = new Date().getFullYear();
+const years = currentYear - year;
+
+
 export const InformData = [
   {
     id: 1,
@@ -35,7 +40,7 @@ export const InformData = [
   },
   {
     id: 5,
-    number: "3 лет",
+    number: `${years} лет`,
     about: "На рынке",
     imageUrl: Image5,
     more: "Мы работаем с 2023 года, развиваясь каждый день.",
